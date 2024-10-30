@@ -1,0 +1,7 @@
+Rewrite Job offer so it fits to the scheme given below.
+Replece fragments in capital letters with appriopiate content or token <NONE> if no information is given.
+Use dashed lists when multiple elements.
+Be very precise.
+Use only Eglish.
+
+Scheme:

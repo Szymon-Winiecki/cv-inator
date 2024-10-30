@@ -1,0 +1,44 @@
+{
+    "job_offer": {
+        "job_title": "Python Developer",
+        "company_name": "KYOTU Technology sp. z o.o.",
+        "location": "remote work, Wrocław, Śródmieście",
+        "salary_range": "21 840–26 800 zł net (+ VAT) / mth.",
+        "employment_type": "B2B, full-time",
+        "experience_level": "senior",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "We are currently seeking a Python Developer to join our team and contribute to our exciting projects. Software for production hall operations, Digitization solutions for administrative documents, Real estate industry applications.",
+        "requirements": [
+            "Experience: 5+ years of professional Python development experience. Strong understanding of Python best practices, code quality, and testing.",
+            "Framework Expertise: Strong knowledge of one or more frameworks, particularly FastAPI. Experience with other frameworks such as Django or Flask is a plus.",
+            "Containerization: Experience with Docker for creating and managing containerized applications. Knowledge of Kubernetes or other orchestration tools is a plus.",
+            "Database Skills: Proficiency with relational databases such as PostgreSQL. Experience with NoSQL databases such as MongoDB. Knowledge of message brokers like RabbitMQ.",
+            "Version Control: Experience with Git and maintaining repositories in platforms like GitHub, GitLab, or Bitbucket.",
+            "Cloud & DevOps (Nice to Have):Experience with AWS, Azure, or Google Cloud Platform (GCP). Knowledge of CI/CD pipelines.",
+            "Testing: Experience with automated testing tools and frameworks such as PyTest, Unittest, or Testcontainers."
+        ],
+        "requiered_skills": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "AWS",
+            "Flask",
+            "Docker"
+        ],
+        "nice_to_have_skills": [
+            "Kubernetes",
+            ".Net",
+            "Android",
+            "iOS",
+            "Java",
+            "Angular"
+        ],
+        "benefits": [
+            "Health benefit and sport package.",
+            "Great team buildings, Thursdays with burgers.",
+            "Open communication, flat organization structure."
+        ]
+    }
+}

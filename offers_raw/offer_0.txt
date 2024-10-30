@@ -1,0 +1,35 @@
+Title: Junior Python Developer 
+Stack must-have: Linux, Python, Bash, Jenkins, Spinnaker, Docker, Kubernetes, English, Polish
+Stack nice-to-have: Virtualziation, KVM, QUEMU, Continuous Integration, Continuous delivery
+localization: remote
+experience: Junior
+Category: Backend, Python
+Company: Link Group
+Text:
+Must have:
+
+    At least 1 year of professional experience
+    Linux system experience
+    Python programing skills
+    Knowledge of scripting languages like: bash, python
+    Experience with tools: Jenkins, Spinnaker, Docker and Kubernetes
+    Willingness to learn new tools and technology
+    Good written and spoken English skills
+
+Nice to have:
+
+    Commercial experience with Linux virtualization systems (KVM, QEMU, etc)
+    Experience in continuous integration and continuous delivery systems
+
+Benefits:
+    Pakiet Sportowy, Prywatna opieka medyczna, Budżet na szkolenia, Międzynarodowe projekty
+
+At Link Group we build tech teams for Fortune 500 companies and the hottest startups in the world. We run many different projects for which we are looking for experienced and talented candidates for clients from various industries.
+
+If you join us, we will make sure that the offer is tailored to your needs. We want you to receive tasks that match your interests, meet your financial expectations and, above all, will allow you to develop in the professional field.
+
+Currently, we are looking for Python developers to join our teams and work on the most advanced, innovative and diverse projects on the IT market.
+The project you will join is from the finance/stock exchange industry. Our client creates a web portal to manage financial accounts and make financial investments. Our Agile teams strive to use the latest technologies that ensure an appropriate level of security.
+
+Tech stack:
+Python, bash, Jenkins, Linux

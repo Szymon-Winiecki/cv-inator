@@ -1,0 +1,39 @@
+{
+    "job_offer": {
+        "job_title": "Python Developer",
+        "company_name": "ITFS sp. z o.o.",
+        "location": "remote, Warszawa, mazowieckie",
+        "salary_range": "120-134 z£ netto (+ VAT) / godz.",
+        "employment_type": "B2B, full-time",
+        "experience_level": "mid",
+        "industry": "medyczna",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "The job involves writing unit and integration tests, as well as debugging existing code. It also requires monitoring and maintaining applications to ensure their performance and security.",
+        "requirements": [
+            "Min 4 years of relevant experience on similar positions",
+            "Knowledge in technologies such as Python 3.x, GIT(lab)",
+            "Basic knowledge of REST API/swagger, Docker, Pytest"
+        ],
+        "requiered_skills": [
+            "Python 3.x",
+            "GIT(lab)",
+            "REST API/swagger",
+            "Docker",
+            "Pytest",
+            "Knowledge in one web framework (Flask/Django/Bottle/Falcon)"
+        ],
+        "nice_to_have_skills": [
+            "Pandas",
+            "SQLAlchemy",
+            "PostgreSQL",
+            "Kubernetes",
+            "AWS (S3)",
+            "Aspose.words"
+        ],
+        "benefits": [
+            "Flexible working conditions in a stable company",
+            "Additional benefits (health insurance, sports facilities, free book subscription - up to 3 times per month)"
+        ]
+    }
+}

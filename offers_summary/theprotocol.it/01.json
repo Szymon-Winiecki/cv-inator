@@ -1,0 +1,41 @@
+{
+    "job_offer": {
+        "job_title": "Lead Software Engineer (Python)",
+        "company_name": "GPC GLOBAL TECHNOLOGY CENTER",
+        "location": "hybrid work, Kraków, Grzegorzki, Lubicz 23a",
+        "salary_range": "N/A",
+        "employment_type": "contract of employment (full-time)",
+        "experience_level": "mid",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies. Your role will be central to understanding the applicability of Generative AI for our company's unique use cases and you will be instrumental in bringing Cloud solutions from development to production.",
+        "requirements": [
+            "Bachelor’s degree in Computer Science, Engineering, or related field.",
+            "Minimum of 4-5 years of experience in technical leadership, with a strong focus on Cloud solutions and development-to-production lifecycle."
+        ],
+        "requiered_skills": [
+            "Excellent communication, collaboration, and problem-solving skills.",
+            "Extensive hands-on experience deploying scalable cloud-based solutions.",
+            "Proficient in Google Cloud Platform (GCP), particularly in leveraging services like Vertex AI and other GCP offerings to build, deploy, and manage robust data-driven solutions."
+        ],
+        "nice_to_have_skills": [
+            "Passion for learning and applying new technologies, with the ability to inspire and drive innovation within the team.",
+            "Experience with Generative AI is a major plus."
+        ],
+        "benefits": [
+            "sharing the costs of sports activities",
+            "private medical care",
+            "sharing the costs of professional training & courses",
+            "life insurance",
+            "coffee / tea",
+            "meal passes",
+            "sharing the commuting costs",
+            "extra leave",
+            "work in international teams",
+            "friendly atmosphere",
+            "copyrights for IT roles",
+            "hybrid work"
+        ]
+    }
+}

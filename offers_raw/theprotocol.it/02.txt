@@ -1,0 +1,52 @@
+Offer title: Korepetytor online - Python Pro;
+Company: Odreval Limited (Kodland);
+Salary: N/A;
+Contract: B2B, full-time;
+Location: praca zdalna, Warszawa, mazowieckie;
+Experience: mid, senior;
+expected technologies: Python;
+optional technologies: N/A;
+
+O projekcie
+Workload:
+Nauczanie grup od 4 do 15 uczniów. Kurs trwa 32 tygodnie.
+Początkowo 1-2 grupy przez pierwszy miesiąc.
+Obciążenie może wzrosnąć do 4 grup w ciągu pierwszych 2 miesięcy.
+W ciągu 3 miesięcy nauczyciel może prowadzić nawet do 10 grup, w zależności od wyników pracy.
+Harmonogram:
+Dni robocze - 16:00 - 22:30
+Weekend - 10:00 - 21:30
+
+Twój zakres obowiązków
+Prowadzenie interaktywnych i angażujących lekcji opartych na dostarczonych scenariuszach i materiałach.
+Terminowe sprawdzanie zadań (na zajęciach i w domu).
+Monitorowanie i poprawianie frekwencji oraz jakości nauki.
+Nadzór nad czatem grupowym i odpowiadanie na zapytania co najmniej raz na 24 godziny.
+Utrzymywanie kontaktu z zespołem dydaktycznym co najmniej raz na 24 godziny.
+
+Nasze wymagania
+
+Mocna znajomość Pythona (algorytmy, metody, instrukcje warunkowe, kolekcje, struktury danych, OOP).
+Dobra znajomość angielskiego i umiejętność samodzielnego poszukiwania informacji: często będziesz musiał korzystać z materiałów które często są w języku angielskim, aby szybko rozwiązywać problemy.
+Doświadczenie z bibliotekami Pythona (EasyGUI, Pillow, Discord.py, aiogram itp.).
+Doświadczenie w tworzeniu chatbotów dla Telegrama i Discorda oraz w pisaniu aplikacji internetowych.
+Umiejętność czytania i szybkiego zrozumienia kodu innych osób (w pracy i aby sprawnie pomagać uczniom).
+Doświadczenie w pracy z bazami danych.
+Biegłość nie tylko w programowaniu, ale także w przeglądaniu kodu.
+Umiejętność pracy jako freelancer.
+Punktualność, dobra organizacja i zarządzanie czasem.
+Czerpiesz radość z interakcji z dziećmi oraz współpracy z członkami zespołu.
+
+    Zaangażowanie w doskonalenie swoich umiejętności nauczycielskich na podstawie otrzymanych opinii.
+
+Czy jesteś programistą z pasją do kodowania? Szukasz wyjątkowej możliwości pracy na pół etatu i chcesz otrzymywać wynagrodzenie za nauczanie dzieci kluczowych umiejętności cyfrowych, takich jak programowanie i tworzenie stron internetowych oraz mówisz płynnie po polsku? Chyba mamy dla Ciebie propozycję!
+Szukamy zaangażowanych i kreatywnych osób, które dołączą do naszej społeczności nauczycieli online. Szczególnie interesuje nas, jeśli jesteś ekspertem Pythona!
+Nie jest wymagane doświadczenie w nauczaniu; bądź jednak gotów na test umiejętności, w którym musisz wykazać się znajomością kodowania (test zostanie przesłany po rozmowie).
+Aby zakwalifikować się na to stanowisko, musisz posiadać komputer/laptop z systemem Windows lub Mac, dobre połączenie z internetem oraz pasję do kodowania!
+Aplikuj i dołącz do naszego zespołu w Kodland!
+
+Benefity
+
+możliwość pracy zdalnej
+elastyczny czas pracy
+zniżki na firmowe produkty i usługi

@@ -1,0 +1,34 @@
+{
+    "job_offer": {
+        "job_title": "Korepetytor Online - Python Pro",
+        "company_name": "Odreval Limited (Kodland)",
+        "location": "praca zdalna, Warszawa, mazowieckie",
+        "salary_range": "N/A",
+        "employment_type": "B2B, full-time",
+        "experience_level": "mid, senior",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "As a Korepetytor Online - Python Pro at Odreval Limited (Kodland), you will be responsible for teaching groups of 4 to 15 students online. The workload includes planning interactive and engaging lessons based on provided scenarios and materials, conducting regular assessments during and after classes, monitoring attendance and learning progress, managing multiple groups as needed based on performance results, and maintaining contact with the educational team at least once every 24 hours.",
+        "requirements": [
+            "Strong knowledge of Python (algorithms, methods, conditional statements, collections, data structures, OOP)",
+            "Good proficiency in English and ability to independently seek information: you will often need to read materials written in English quickly to solve problems."
+        ],
+        "requiered_skills": [
+            "Python libraries expertise (EasyGUI, Pillow, Discord.py, aiogram)",
+            "Experience with creating chatbots for Telegram and Discord, as well as developing internet applications",
+            "Ability to read and quickly understand code from other developers"
+        ],
+        "nice_to_have_skills": [
+            "Passion for coding",
+            "Willingness to work remotely on a full-time basis",
+            "Passion for teaching digital skills such as programming and web development",
+            "Organization and time management skills",
+            "Punctuality, ability to work independently"
+        ],
+        "benefits": [
+            "Flexible remote working",
+            "Eligibility for company products and services discounts"
+        ]
+    }
+}

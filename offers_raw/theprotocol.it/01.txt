@@ -1,0 +1,56 @@
+Offer title: Lead Software Engineer (Python);
+Company: GPC GLOBAL TECHNOLOGY CENTER;
+Salary: N/A;
+Contract: contract of employment (full-time);
+Location: hybrid work, Kraków, Grzegórzki, Lubicz 23a;
+Experience: mid;
+expected technologies: Python;
+optional technologies: N/A;
+
+About the project
+We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies. The ideal candidate will have a unique blend of leadership, technical expertise, and a passion for new technology. Your role will be central to understanding the applicability of Generative AI for our company's unique use cases, and you will be instrumental in bringing Cloud solutions from development to production.
+
+Your responsibilities
+
+Technical Leadership:
+Lead and mentor a talented technical team, fostering a culture of innovation and continuous learning.
+Write, review, and maintain code while ensuring alignment with best practices and project goals.
+Design and whiteboard solutions, collaborating with the team to develop and implement innovative approaches.
+Generative AI Exploration:
+Investigate and apply Generative AI methodologies to meet the company's specific needs and challenges.
+Collaborate with cross-functional teams to determine the best applications of Generative AI for the business.
+Cloud Solutions Development:
+Spearhead the implementation of Cloud solutions, specifically on the Google Cloud Platform (GCP) and Vertex AI.
+Guide the full lifecycle of development, from initial design to production deployment, ensuring quality and efficiency.
+Data and Machine Learning:
+Utilize experience with data analytics to provide insights and drive decision-making.
+Build and deploy machine learning models, working with the team to optimize and scale as needed.
+Continuous Learning and Improvement:
+Stay abreast of emerging technologies and industry trends to continually evolve the team's capabilities.
+
+    Foster a culture of curiosity and learning, encouraging experimentation and growth.
+
+Our requirements
+
+Bachelor’s degree in Computer Science, Engineering, or related field.
+Minimum of 4-5 years of experience in technical leadership, with a strong focus on Cloud solutions and development-to-production lifecycle.
+Passion for learning and applying new technologies, with the ability to inspire and drive innovation within the team.
+Excellent communication, collaboration, and problem-solving skills.
+Extensive hands-on experience deploying scalable cloud-based solutions.
+Proficient in Google Cloud Platform (GCP), particularly in leveraging services like Vertex AI and other GCP offerings to build, deploy, and manage robust data-driven solutions.
+Experience with Generative AI is a major plus.
+
+Benefits
+
+sharing the costs of sports activities
+private medical care
+sharing the costs of professional training & courses
+life insurance
+coffee / tea
+meal passes
+sharing the commuting costs
+extra leave
+work in international teams
+friendly atmosphere
+copyrights for IT roles
+hybrid work

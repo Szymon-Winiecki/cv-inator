@@ -1,0 +1,22 @@
+Please summarize the following job offer in English by extracting key information. The summary should be structured into three sections:
+
+    Job Description: A short, concise description of the job and main responsibilities (2-3 sentences).
+    Requirements: A bullet-point list of qualifications, skills, and experience required for the role.
+    Benefits: A bullet-point list of benefits or perks offered by the employer.
+
+The response must be entirely in English.
+
+Input:
+
+${OFFER}
+
+Output:
+
+    Job Description:
+        [Short description of the job in English]
+
+    Requirements:
+        [List of key requirements in English]
+
+    Benefits:
+        [List of offered benefits in English]

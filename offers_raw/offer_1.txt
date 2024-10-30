@@ -1,0 +1,34 @@
+Title: Junior DevOps Engineer z chmurą Azure/AWS/GCP 
+localization: remote
+experience: Junior
+Category: DevOps, Python
+Company: SlickCloud
+Text:
+Od kandydatów oczekujemy:
+
+    Czujesz się pewnie w Microsoft Azure/GCP/AWS - idealnie, jeśli masz jakieś certyfikaty.
+    Znajomości Terraform, GitLab CI/CD.
+    Znajomość Kubernetesa.
+    Znajomość CI/CD.
+    Dobrej znajomości języka angielskiego.
+    Statusu studenta - wymóg konieczny.
+
+
+W SlickCloud szukamy osób, które chcą rozwijać się w temach Cloud i DevOps. Oferujemy świetne warunki i elastyczną pracę. Nie posiadamy biura - wszystkie nasze projekty są w 100% zdalnie. Szukamy pasjonatów i entuzjastów chmury!
+
+Tym razem poszukujemy ambitnego i zdolnego kandydata na stanowisko Junior DevOps Engineera, który chce rozwijać się w tematach Cloud (szczególnie Azure, AWS i GCP) i DevOps.
+
+Oferujemy:
+
+    Zatrudnienie na umowę zlecenie ze statusem studenta (rozważamy także zatrudnienie w formie B2B)
+    Elastyczną pracę w pełnym wymiarze godzin.
+    Pracę w formie zdalnej.
+    Najlepsze miejsce do rozwoju jako DevOps / Cloud Engineer w Polsce.
+
+
+Zakres obowiązków
+
+    Rozwój i utrzymanie infrastruktury na Azure/GCP/AWS z użyciem Terraform.
+    Budowa CI/CD (GitLab/Jenkins/GitHub Actions).
+    Deployment aplikacji na Kubernetes.
+    Pisanie skryptów Python i Bash. 

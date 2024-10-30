@@ -1,0 +1,70 @@
+Offer title: Python Developer;
+Company: VML Enterprise Solutions Sp. z o.o.;
+Salary: 12 000–16 800 zł net (+ VAT) / mth.;
+Contract: B2B, full-time;
+Location: remote, Poznań, Greater Poland;
+Experience: mid;
+expected technologies: Python, PostgreSQL, Oracle;
+optional technologies: Google Cloud Platform, Kubernetes;
+
+About the project
+Python Developer needed to join our team here at VML Enterprise Solutions.
+
+Your responsibilities
+The vision of the WPP Open Platform is to create a common development and architecture framework, with supporting infrastructure, for the development of digital products across WPP. The platform will provide the single point for access to world class technology and data for our agencies; allowing them to build and scale products and applications, then share them across the business, improving visibility and collaboration. With Open, we expect to address our client needs faster and reduce the time to market for new capability.
+We are looking for a highly skilled and motivated Python Developer to join our team. The ideal candidate will have a background in web development using Python and related frameworks. You will be responsible for designing, implementing, and maintaining web applications that meet the needs of our clients. You will join a collaborative team with a focus on engineering best practice and continuous improvement and will have lots of business exposure, enabling you to see the results of your work. You will have excellent knowledge of the DevOps process and can work with large and complex codebases to ensure our product is leading edge.
+
+Our requirements
+
+Python development experience with a focus on web applications/services
+Strong knowledge of Python 3.x and either FastAPI/Flask framework
+Hands-on experience with RDBMS (Postgres, Oracle or others) and ORM
+Write clean, maintainable, and well-documented code following best practices and
+industry standards
+Experience developing API microservices
+Significant experience of working with Agile methodologies
+Good problem-solving skills
+
+    You will collaborate with our UK project team, so we’ll need you to be available until 18:00 PL time.
+
+    Optional
+
+GCP or any other Cloud experience
+
+    Kubernetes experience
+
+This is how we organize our work
+
+This is how we work
+agilescrum
+
+Please note that this job is a full-time position located in Poland, but the selection process will be conducted in English.
+Please send over your CV in English.
+
+Development opportunities we offer
+
+substantive support from technological leaders
+support of IT events
+
+    technical knowledge exchange within the company
+
+What we offer
+
+Salary depending on presented skills: 12 000 - 16 800 PLN /month (B2B contract)
+Fully remote job as well as possibility to visit our offices in Poznań, Katowice and Bydgoszcz
+Work equipment with delivery to your door
+
+    Opportunity to work with some of the most exciting brands around the world
+
+Benefits
+
+remote work opportunities
+flexible working time
+fruits
+corporate library
+no dress code
+video games at work
+coffee / tea
+drinks
+parking space for employees
+leisure zone

@@ -1,0 +1,40 @@
+{
+    "job_offer": {
+        "job_title": "Python Developer",
+        "company_name": "VML Enterprise Solutions Sp. z o.o.",
+        "location": "remote, Poznañ, Greater Poland",
+        "salary_range": "12 000 - 16 800 PLN / month (B2B contract)",
+        "employment_type": "full-time",
+        "experience_level": "mid",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "A Python Developer position available for a full-time role at VML Enterprise Solutions. The developer will be responsible for designing, implementing and maintaining web applications that meet the needs of our clients within the WPP Open Platform.",
+        "requirements": [
+            "Python development experience with focus on web applications/services",
+            "Hands-on experience with RDBMS (Postgres, Oracle or others) and ORM",
+            "Write clean, maintainable, and well-documented code following best practices and industry standards",
+            "Significant experience of working with Agile methodologies"
+        ],
+        "requiered_skills": [
+            "Python 3.x and either FastAPI/Flask framework",
+            "Experience developing API microservices",
+            "Good problem-solving skills"
+        ],
+        "nice_to_have_skills": [
+            "GCP or any other Cloud experience",
+            "Kubernetes experience"
+        ],
+        "benefits": [
+            "Remote work opportunities",
+            "Flexible working time",
+            "Fruits",
+            "Corporate library",
+            "No dress code",
+            "Video games at work",
+            "Coffee/tea and drinks provided",
+            "Parking space for employees",
+            "Leisure zone"
+        ]
+    }
+}
