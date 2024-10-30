@@ -1,5 +1,5 @@
 import argparse
-import pathlib
+from pathlib import Path
 import json
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,33 +9,51 @@ from sklearn.decomposition import PCA
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Summarize the job offer')
-    parser.add_argument('-input_dir', required=True, type=str, help='input directory with summarized offers')
-    parser.add_argument('-output_path', required=True, type=str, help='Output path for the comparison results')
+    parser.add_argument('-input_path', required=True, type=str, help='Path to the embeddings file')
+    parser.add_argument('-output_dir', required=True, type=str, help='Direcotry for saving the output')
     return parser.parse_args()
+
+def plot_similarity(similarities, labels, output_path):
+    fig, ax = plt.subplots()
+    cax = ax.matshow(similarities, cmap='viridis')
+    plt.colorbar(cax)
+
+    ax.set_xticks(np.arange(len(labels)))
+    ax.set_yticks(np.arange(len(labels)))
+
+    ax.set_xticklabels([f.name for f in labels])
+    ax.set_yticklabels([f.name for f in labels])
+
+    for i in range(len(labels)):
+        for j in range(len(labels)):
+            text = ax.text(j, i, round(similarities[i, j], 2), ha='center', va='center', color='w')
+
+    plt.savefig(output_path)
+
+def plot_pca(embeddings, labels, output_path):
+    pca = PCA(n_components=2)
+    embeddings_pca = pca.fit_transform(embeddings)
+
+    fig, ax = plt.subplots()
+    for i in range(len(labels)):
+        ax.scatter(embeddings_pca[i, 0], embeddings_pca[i, 1], label=labels[i].name)
+    
+    ax.legend()
+    plt.savefig(output_path)
 
 if __name__ == '__main__':
 
     parsed_args = parse_args()
 
-    fields_to_compare = ['job_title', 'job_description', 'requirements', 'requiered_skills', 'nice_to_have_skills', 'benefits']
-    fields_weights = {'job_title': 1, 'job_description': 2, 'requirements': 2, 'requiered_skills': 2, 'nice_to_have_skills': 1, 'benefits': 0.5}
+    embeddings = np.load(parsed_args.input_path)
 
-    input_dir = pathlib.Path(parsed_args.input_dir)
+    info_file = parsed_args.input_path.replace('.npy', '_info.json')
+    embeddings_info = json.load(open(info_file, 'r'))
 
-    input_files = [f for f in input_dir.iterdir() if f.is_file() and f.suffix == '.json']
-
-    model = SentenceTransformer("paraphrase-albert-small-v2")
-    # model = SentenceTransformer("all-MiniLM-L6-v2")
-    MODEL_EMBEDDING_SIZE = 768
-    # MODEL_EMBEDDING_SIZE = 384
-
-    embeddings = np.zeros((len(input_files), len(fields_to_compare), MODEL_EMBEDDING_SIZE))
-
-    for file_ind, file in enumerate(input_files):
-        offer = json.load(open(file, 'r'))['offer_summary']
-        for field_ind, field in enumerate(fields_to_compare):
-            text = ", ".join(offer[field]) if type(offer[field]) == list else offer[field]
-            embeddings[file_ind, field_ind] = model.encode(text)
+    fields_to_compare = embeddings_info['fields_to_compare']
+    fields_weights = embeddings_info['fields_weights']
+    input_files = [Path(f) for f in embeddings_info['input_files']]
+    model = SentenceTransformer(embeddings_info['model'])
 
 
 
@@ -50,21 +68,11 @@ if __name__ == '__main__':
 
     similarities /= sum(fields_weights.values())
 
-    fig, ax = plt.subplots()
-    cax = ax.matshow(similarities, cmap='viridis')
-    plt.colorbar(cax)
+    output_dir = Path(parsed_args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    ax.set_xticks(np.arange(len(input_files)))
-    ax.set_yticks(np.arange(len(input_files)))
-
-    ax.set_xticklabels([f.name for f in input_files])
-    ax.set_yticklabels([f.name for f in input_files])
-
-    for i in range(len(input_files)):
-        for j in range(len(input_files)):
-            text = ax.text(j, i, round(similarities[i, j], 2), ha='center', va='center', color='w')
-
-    plt.savefig(parsed_args.output_path)
+    plot_similarity(similarities, input_files, output_dir / 'final_similarity_matrix.png')
+    plot_pca(embeddings[:, fields_to_compare.index('job_description')], input_files, output_dir / 'job_description_pca_plot.png')
 
 
 
