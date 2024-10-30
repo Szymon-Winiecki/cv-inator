@@ -1,40 +1,62 @@
 {
-    "job_offer": {
+    "offer_summary": {
         "job_title": "Python Developer",
         "company_name": "VML Enterprise Solutions Sp. z o.o.",
-        "location": "remote, Poznañ, Greater Poland",
-        "salary_range": "12 000 - 16 800 PLN / month (B2B contract)",
-        "employment_type": "full-time",
-        "experience_level": "mid",
+        "location": "remote, Pozna\u0139\u201e, Greater Poland",
+        "salary_range": "N/A",
+        "employment_type": "Full-time",
+        "experience_level": "Mid",
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "A Python Developer position available for a full-time role at VML Enterprise Solutions. The developer will be responsible for designing, implementing and maintaining web applications that meet the needs of our clients within the WPP Open Platform.",
+        "job_description": "A highly skilled and motivated Python Developer is needed to join our team. The ideal candidate will have experience in web development using Python and related frameworks, designing, implementing, and maintaining web applications that meet the needs of our clients.",
         "requirements": [
-            "Python development experience with focus on web applications/services",
+            "Strong knowledge of Python 3.x and either FastAPI/Flask framework",
             "Hands-on experience with RDBMS (Postgres, Oracle or others) and ORM",
-            "Write clean, maintainable, and well-documented code following best practices and industry standards",
+            "Experience developing API microservices",
             "Significant experience of working with Agile methodologies"
         ],
         "requiered_skills": [
-            "Python 3.x and either FastAPI/Flask framework",
+            "Python development experience with a focus on web applications/services",
+            "Strong knowledge of Python 3.x and either FastAPI/Flask framework",
+            "Hands-on experience with RDBMS (Postgres, Oracle or others) and ORM",
+            "Write clean, maintainable, and well-documented code following best practices and industry standards",
             "Experience developing API microservices",
-            "Good problem-solving skills"
+            "Significant experience of working with Agile methodologies"
         ],
         "nice_to_have_skills": [
             "GCP or any other Cloud experience",
             "Kubernetes experience"
         ],
         "benefits": [
+            "Salary depending on presented skills: 12,000 - 16,800 PLN/month (B2B contract)",
+            "Fully remote job as well as possibility to visit our offices in Pozna\u0139\u201e, Katowice and Bydgoszcz",
+            "Work equipment with delivery to your door",
+            "Substantive support from technological leaders",
+            "Support of IT events within the company",
+            "Technical knowledge exchange within the company",
             "Remote work opportunities",
             "Flexible working time",
             "Fruits",
             "Corporate library",
-            "No dress code",
+            "No dress code at work",
             "Video games at work",
-            "Coffee/tea and drinks provided",
+            "Coffee / Tea and drinks on-site",
             "Parking space for employees",
             "Leisure zone"
         ]
-    }
+    },
+    "info": {
+        "total_duration": 11809019400,
+        "load_duration": 1442067400,
+        "prompt_eval_count": 1158,
+        "prompt_eval_duration": 763567000,
+        "eval_count": 504,
+        "eval_duration": 9599455000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": ".\\prompt.txt",
+    "offer_path": ".\\offers_raw\\theprotocol.it\\00.txt",
+    "timestamp": "2024-10-30 16:49:29.926736",
+    "LLM_engine": "ollama"
 }

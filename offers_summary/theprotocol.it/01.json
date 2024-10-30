@@ -1,27 +1,27 @@
 {
-    "job_offer": {
+    "offer_summary": {
         "job_title": "Lead Software Engineer (Python)",
         "company_name": "GPC GLOBAL TECHNOLOGY CENTER",
-        "location": "hybrid work, Kraków, Grzegorzki, Lubicz 23a",
+        "location": "Krak\u00f3w, Grzeg\u00f3rzki, Lubicz 23a",
         "salary_range": "N/A",
-        "employment_type": "contract of employment (full-time)",
+        "employment_type": "Contract of employment (full-time)",
         "experience_level": "mid",
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies. Your role will be central to understanding the applicability of Generative AI for our company's unique use cases and you will be instrumental in bringing Cloud solutions from development to production.",
+        "job_description": "We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies. The ideal candidate will have a unique blend of leadership, technical expertise, and a passion for new technology.",
         "requirements": [
-            "Bachelor’s degree in Computer Science, Engineering, or related field.",
+            "Bachelor's degree in Computer Science, Engineering, or related field.",
             "Minimum of 4-5 years of experience in technical leadership, with a strong focus on Cloud solutions and development-to-production lifecycle."
         ],
         "requiered_skills": [
-            "Excellent communication, collaboration, and problem-solving skills.",
-            "Extensive hands-on experience deploying scalable cloud-based solutions.",
-            "Proficient in Google Cloud Platform (GCP), particularly in leveraging services like Vertex AI and other GCP offerings to build, deploy, and manage robust data-driven solutions."
+            "Passion for learning and applying new technologies",
+            "Excellent communication, collaboration, and problem-solving skills",
+            "Extensive hands-on experience deploying scalable cloud-based solutions",
+            "Proficient in Google Cloud Platform (GCP), particularly in leveraging services like Vertex AI and other GCP offerings to build, deploy, and manage robust data-driven solutions"
         ],
         "nice_to_have_skills": [
-            "Passion for learning and applying new technologies, with the ability to inspire and drive innovation within the team.",
-            "Experience with Generative AI is a major plus."
+            "Experience with Generative AI"
         ],
         "benefits": [
             "sharing the costs of sports activities",
@@ -37,5 +37,18 @@
             "copyrights for IT roles",
             "hybrid work"
         ]
-    }
+    },
+    "info": {
+        "total_duration": 7202913500,
+        "load_duration": 17435200,
+        "prompt_eval_count": 1075,
+        "prompt_eval_duration": 23956000,
+        "eval_count": 405,
+        "eval_duration": 7160187000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": ".\\prompt.txt",
+    "offer_path": ".\\offers_raw\\theprotocol.it\\01.txt",
+    "timestamp": "2024-10-30 16:50:31.639648",
+    "LLM_engine": "ollama"
 }

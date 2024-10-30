@@ -1,5 +1,5 @@
 {
-    "job_offer": {
+    "offer_summary": {
         "job_title": "Korepetytor Online - Python Pro",
         "company_name": "Odreval Limited (Kodland)",
         "location": "praca zdalna, Warszawa, mazowieckie",
@@ -9,26 +9,43 @@
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "As a Korepetytor Online - Python Pro at Odreval Limited (Kodland), you will be responsible for teaching groups of 4 to 15 students online. The workload includes planning interactive and engaging lessons based on provided scenarios and materials, conducting regular assessments during and after classes, monitoring attendance and learning progress, managing multiple groups as needed based on performance results, and maintaining contact with the educational team at least once every 24 hours.",
+        "job_description": "This position involves online teaching of groups ranging from 4 to 15 students. Workload includes leading interactive and engaging lessons based on provided scenarios and materials, monitoring student progress, and providing support as needed.",
         "requirements": [
-            "Strong knowledge of Python (algorithms, methods, conditional statements, collections, data structures, OOP)",
-            "Good proficiency in English and ability to independently seek information: you will often need to read materials written in English quickly to solve problems."
+            "Strong knowledge of Python (algorithms, methods, conditional instructions, collections, data structures, OOP)",
+            "Good proficiency in English and ability to independently find information: you will often need to read materials in English to quickly solve problems.",
+            "Experience with Python libraries (EasyGUI, Pillow, Discord.py, aiogram etc.).",
+            "Experience creating chatbots for Telegram and Discord, as well as developing internet applications.",
+            "Ability to read and understand other people's code, especially in a work context and to help students effectively.",
+            "Experience working with databases.",
+            "Fluency not only in programming but also in reading and understanding the code.",
+            "Familiarity with freelance work.",
+            "Punctuality, good organization and time management skills."
         ],
         "requiered_skills": [
-            "Python libraries expertise (EasyGUI, Pillow, Discord.py, aiogram)",
-            "Experience with creating chatbots for Telegram and Discord, as well as developing internet applications",
-            "Ability to read and quickly understand code from other developers"
+            "Strong knowledge of Python",
+            "Good proficiency in English"
         ],
         "nice_to_have_skills": [
-            "Passion for coding",
-            "Willingness to work remotely on a full-time basis",
-            "Passion for teaching digital skills such as programming and web development",
-            "Organization and time management skills",
-            "Punctuality, ability to work independently"
+            "Experience teaching",
+            "Passion for coding"
         ],
         "benefits": [
-            "Flexible remote working",
-            "Eligibility for company products and services discounts"
+            "Remote work flexibility",
+            "Flexible working hours",
+            "Discounts on firm products and services"
         ]
-    }
+    },
+    "info": {
+        "total_duration": 8757764000,
+        "load_duration": 19545100,
+        "prompt_eval_count": 1712,
+        "prompt_eval_duration": 1088268000,
+        "eval_count": 403,
+        "eval_duration": 7647064000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": ".\\prompt.txt",
+    "offer_path": ".\\offers_raw\\theprotocol.it\\02.txt",
+    "timestamp": "2024-10-30 16:50:54.267019",
+    "LLM_engine": "ollama"
 }

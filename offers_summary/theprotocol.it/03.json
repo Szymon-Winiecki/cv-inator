@@ -1,39 +1,50 @@
 {
-    "job_offer": {
+    "offer_summary": {
         "job_title": "Python Developer",
         "company_name": "ITFS sp. z o.o.",
         "location": "remote, Warszawa, mazowieckie",
-        "salary_range": "120-134 z£ netto (+ VAT) / godz.",
-        "employment_type": "B2B, full-time",
+        "salary_range": "N/A",
+        "employment_type": "full-time",
         "experience_level": "mid",
-        "industry": "medyczna",
+        "industry": "information technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "The job involves writing unit and integration tests, as well as debugging existing code. It also requires monitoring and maintaining applications to ensure their performance and security.",
+        "job_description": "Develop and maintain Python-based applications, monitor their performance and security. Work as a part of a team with other developers, designers, and project managers to deliver complete projects.",
         "requirements": [
-            "Min 4 years of relevant experience on similar positions",
-            "Knowledge in technologies such as Python 3.x, GIT(lab)",
-            "Basic knowledge of REST API/swagger, Docker, Pytest"
+            "At least 4 years of experience in similar positions",
+            "Knowledge of Python 3.x, Git",
+            "Basic knowledge of REST API/swagger, Docker, Pytest frameworks"
         ],
         "requiered_skills": [
-            "Python 3.x",
-            "GIT(lab)",
-            "REST API/swagger",
+            "Python (3.x)",
             "Docker",
-            "Pytest",
-            "Knowledge in one web framework (Flask/Django/Bottle/Falcon)"
+            "Git",
+            "REST API",
+            "Django",
+            "PostgreSQL"
         ],
         "nice_to_have_skills": [
-            "Pandas",
-            "SQLAlchemy",
-            "PostgreSQL",
-            "Kubernetes",
             "AWS (S3)",
-            "Aspose.words"
+            "Kubernetes",
+            "AWS Services (like Aspose.words, AWS SDK for Python, etc.)"
         ],
         "benefits": [
-            "Flexible working conditions in a stable company",
-            "Additional benefits (health insurance, sports facilities, free book subscription - up to 3 times per month)"
+            "Flexible working hours",
+            "Professional medical coverage",
+            "Sports discounts"
         ]
-    }
+    },
+    "info": {
+        "total_duration": 5909601900,
+        "load_duration": 17899100,
+        "prompt_eval_count": 1181,
+        "prompt_eval_duration": 774309000,
+        "eval_count": 288,
+        "eval_duration": 5120474000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": ".\\prompt.txt",
+    "offer_path": ".\\offers_raw\\theprotocol.it\\03.txt",
+    "timestamp": "2024-10-30 16:51:26.432745",
+    "LLM_engine": "ollama"
 }
