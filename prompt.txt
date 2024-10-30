@@ -1,7 +1,26 @@
-Rewrite Job offer so it fits to the scheme given below.
-Replece fragments in capital letters with appriopiate content or token <NONE> if no information is given.
-Use dashed lists when multiple elements.
-Be very precise.
-Use only Eglish.
+Please summarize the following job offer in English and structure the output as a JSON object with the following fields:
 
-Scheme:
+    job_title: The title of the job.
+    company_name: The name of the company offering the position.
+    location: The location of the job (e.g., city or 'Remote' if applicable).
+    salary_range: The salary range if provided (use 'N/A' if not available).
+    employment_type: The type of employment (e.g., Full-time, Contract, etc.).
+    experience_level: The level of experience required for the job (e.g., Junior, Mid-level, Senior).
+    industry: The industry in which the company operates (e.g., Information Technology, Finance).
+    posting_date: The date the job was posted (use 'N/A' if not available).
+    application_deadline: The deadline for applying if provided (use 'N/A' if not available).
+    job_description: A short, concise description of the job and main responsibilities (2-3 sentences).
+    requirements: A bullet-point list of qualifications, skills, and experience required for the role.
+    requierd_skills: A bullet-point list of specific skills required for the role.
+    nice_to_have_skills: A bullet-point list of specific skills nice-to-have for the role.
+    benefits: A bullet-point list of benefits or perks offered by the employer.
+
+Ensure the response is formatted as valid JSON. If any information is missing in the job offer, use 'N/A' for the respective field.
+
+Put only JSON in response.
+
+Input: 
+
+${OFFER}
+
+Output (example format): { "job_title": "[Job Title]", "company_name": "[Company Name]", "location": "[Location]", "salary_range": "[Salary Range]", "employment_type": "[Employment Type]", "experience_level": "[Experience Level]", "industry": "[Industry]", "posting_date": "[Posting Date]", "application_deadline": "[Application Deadline]", "job_description": "[Short job description]", "requirements": [ "[Requirement 1]", "[Requirement 2]" ], "requierd_skills": [ "[Skill 1]", "[Skill 2]" ], "nice_to_have_skills": [ "[Skill 1]", "[Skill 2]" ], "benefits": [ "[Benefit 1]", "[Benefit 2]" ] }
