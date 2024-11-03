@@ -1,0 +1,51 @@
+Offer title: Fullstack Developers (JS/TS/Node.js)
+Company: emagine sp. z o.o.
+Salary:  salary not specified 
+Contract: contract of employment (full-time)
+Location: hybrid work - Warszawa, Mokotów
+Experience: mid
+expected technologies: Javascript, Typescript, React.js, Node.js, Redux, NoSQL, MongoDB, Firebase, SQL, AWS
+optional technologies: N/A
+Offer content: 
+About the project: 
+Industry: Fintech
+Work model: flexible hybrid (Warsaw office)
+Contract’s length: B2B, long-term cooperation
+Project language: English
+Start: ASAP / 1 month notice period
+
+Your responsibilities: 
+ - We are on the road to growing our hub in Warsaw, so we are looking for FullStack Engineers with JS, TS and Node.js who believe that you work better with people you can see face to face.
+ - Joining the team is a unique opportunity to work with modern financial systems with large scale, high availability and resilience. The company has open positions in multiple domains across the organization, the largest of which are: Card and Banking, Decisioning Banking servicing, Engineering Platform, Partner Operations and Product, Payment Method and Shopping Experience.
+
+Our requirements: 
+ - At least 4+ years of experience.
+ - Javascript/Typescript solid experience.
+ - Framework Knowledge: React.js (front-end) or Node.js (back-end), Redux (state management), Context API, Hook.
+ - CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel.
+ - Experience with NoSQL databases (MongoDB, Firebase), SQL. Handling databases in backend systems using Node.js.
+ - Familiarity with serverless architecture (e.g., AWS). Experience with AWS services and cloud infrastructure in projects.
+ - System Design Focus, especially for senior engineers, assess their ability to design scalable, maintainable systems through architecture discussions. Requirement: Frontend: Focus on scalability, performance, state management, and API integration in React.js. Backend: Focus on designing scalable, event-driven systems with Node.js
+ - Adaptability to different team dynamics.
+ - English at min. B2 level.
+ - Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies.
+
+Development opportunities we offer: 
+ - technical knowledge exchange within the company
+
+What we offer: 
+ - Challenging international projects in a Scandinavian business culture.
+ - Long-term cooperation.
+ - Transparently built relations based on trust and fair play.
+ - Flexible working hours.
+ - Co-financed benefits: Medicover card, Multisport card.
+
+Benefits: 
+ - sharing the costs of sports activities
+ - private medical care
+ - sharing the costs of foreign language classes
+ - life insurance
+ - fruits
+ - integration events
+
+
