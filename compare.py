@@ -37,6 +37,7 @@ def plot_pca(embeddings, labels, output_path):
     fig, ax = plt.subplots()
     for i in range(len(labels)):
         ax.scatter(embeddings_pca[i, 0], embeddings_pca[i, 1], label=labels[i].name)
+        ax.annotate(labels[i].name, (embeddings_pca[i, 0], embeddings_pca[i, 1]))
     
     ax.legend()
     plt.savefig(output_path)
@@ -68,11 +69,15 @@ if __name__ == '__main__':
 
     similarities /= sum(fields_weights.values())
 
+
+    concatenated_embeddings = embeddings.reshape((len(input_files), -1))
+
     output_dir = Path(parsed_args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     plot_similarity(similarities, input_files, output_dir / 'final_similarity_matrix.png')
     plot_pca(embeddings[:, fields_to_compare.index('job_description')], input_files, output_dir / 'job_description_pca_plot.png')
+    plot_pca(concatenated_embeddings, input_files, output_dir / 'concatenated_pca_plot.png')
 
 
 
