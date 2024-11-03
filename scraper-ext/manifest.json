@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Job Offer Scraper",
+    "version": "1.0",
+  
+    "description": "Get job offers from a website",
+  
+    "icons": {
+      "48": "icons/jos-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.theprotocol.it/*"],
+        "js": ["src/Scraper.js", "src/TheProtocoltScraper.js" , "src/jos.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
