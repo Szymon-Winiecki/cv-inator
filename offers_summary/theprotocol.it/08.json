@@ -1,0 +1,55 @@
+{
+    "offer_summary": {
+        "job_title": "Fullstack Developers (JS/TS/Node.js)",
+        "company_name": "emagine sp. z o.o.",
+        "location": "Warszawa, Mokot\u00f3w",
+        "salary_range": "N/A",
+        "employment_type": "Full-time",
+        "experience_level": "Mid",
+        "industry": "Fintech",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "We are recruiting FullStack Engineers with JS, TS and Node.js skills for our Warsaw hub. The position is ideal for individuals who believe they work better in person and have experience working with modern financial systems.",
+        "requirements": [
+            "[At least 4+ years of experience]",
+            "[Solid Javascript/Typescript experience]",
+            "[Knowledge of React.js (front-end) or Node.js (back-end), Redux (state management), Context API, Hook]",
+            "[CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel.]",
+            "[Experience with NoSQL databases (MongoDB, Firebase), SQL. Handling databases in backend systems using Node.js]",
+            "[Familiarity with serverless architecture (e.g., AWS). Experience with AWS services and cloud infrastructure in projects]"
+        ],
+        "requiered_skills": [
+            "[System Design Focus]",
+            "[Focus on scalability for senior engineers]",
+            "[Adaptability to different team dynamics]",
+            "[English at B2 level]"
+        ],
+        "nice_to_have_skills": [
+            "[Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies]"
+        ],
+        "benefits": [
+            "[Transparently built relations based on trust and fair play]",
+            "[Flexible working hours]",
+            "[Sharing the costs of sports activities]",
+            "[Private medical care]",
+            "[Sharing the costs of foreign language classes]",
+            "[Life insurance]",
+            "[Fruits]",
+            "[Integration events]"
+        ]
+    },
+    "info": {
+        "total_duration": 7923272300,
+        "load_duration": 25704400,
+        "prompt_eval_count": 1075,
+        "prompt_eval_duration": 519262000,
+        "eval_count": 417,
+        "eval_duration": 7381827000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": "prompt.txt",
+    "offer_path": "offers_raw\\theprotocol.it\\08.txt",
+    "offer_hash": "072cf76556ce26271814cd964617907edfd200028c6e0484247118eec14baad7",
+    "timestamp": "2024-11-03 23:02:10.723982",
+    "LLM_engine": "ollama"
+}

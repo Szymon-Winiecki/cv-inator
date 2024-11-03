@@ -1,6 +1,6 @@
 {
     "offer_summary": {
-        "job_title": "Korepetytor Online - Python Pro",
+        "job_title": "Korepetytor online - Python Pro",
         "company_name": "Odreval Limited (Kodland)",
         "location": "praca zdalna, Warszawa, mazowieckie",
         "salary_range": "N/A",
@@ -9,43 +9,43 @@
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "This position involves online teaching of groups ranging from 4 to 15 students. Workload includes leading interactive and engaging lessons based on provided scenarios and materials, monitoring student progress, and providing support as needed.",
+        "job_description": "The position involves online teaching of Python programming to students with the workload being a group of 4-15 students over 32 weeks. The instructor can start with 1-2 groups in the first month and up to 10 groups after 3 months.",
         "requirements": [
-            "Strong knowledge of Python (algorithms, methods, conditional instructions, collections, data structures, OOP)",
-            "Good proficiency in English and ability to independently find information: you will often need to read materials in English to quickly solve problems.",
-            "Experience with Python libraries (EasyGUI, Pillow, Discord.py, aiogram etc.).",
-            "Experience creating chatbots for Telegram and Discord, as well as developing internet applications.",
-            "Ability to read and understand other people's code, especially in a work context and to help students effectively.",
-            "Experience working with databases.",
-            "Fluency not only in programming but also in reading and understanding the code.",
-            "Familiarity with freelance work.",
-            "Punctuality, good organization and time management skills."
+            "Mastery of Python (algorithms, methods, conditional statements, collections, data structures, OOP)",
+            "Good proficiency in English",
+            "Experience with Python libraries (EasyGUI, Pillow, Discord.py, aiogram etc.)",
+            "Experience creating chatbots for Telegram and Discord, and writing internet applications",
+            "Ability to read and quickly understand code written by others (both personally and to effectively help students)"
         ],
         "requiered_skills": [
-            "Strong knowledge of Python",
-            "Good proficiency in English"
+            "Strong knowledge of Python programming",
+            "Good English language proficiency",
+            "Experience with various Python libraries and tools",
+            "Experience creating chatbots for Telegram and Discord, and writing internet applications"
         ],
         "nice_to_have_skills": [
-            "Experience teaching",
-            "Passion for coding"
+            "Experience in working with databases",
+            "Ability to work as a freelancer",
+            "Time management skills"
         ],
         "benefits": [
-            "Remote work flexibility",
+            "Remote work option",
             "Flexible working hours",
-            "Discounts on firm products and services"
+            "Discounts on company products and services"
         ]
     },
     "info": {
-        "total_duration": 8757764000,
-        "load_duration": 19545100,
-        "prompt_eval_count": 1712,
-        "prompt_eval_duration": 1088268000,
-        "eval_count": 403,
-        "eval_duration": 7647064000
+        "total_duration": 7830616000,
+        "load_duration": 25434100,
+        "prompt_eval_count": 1427,
+        "prompt_eval_duration": 775485000,
+        "eval_count": 383,
+        "eval_duration": 7027433000
     },
     "model": "qwen2.5:3b",
-    "prompt_path": ".\\prompt.txt",
-    "offer_path": ".\\offers_raw\\theprotocol.it\\02.txt",
-    "timestamp": "2024-10-30 16:50:54.267019",
+    "prompt_path": "prompt.txt",
+    "offer_path": "offers_raw\\theprotocol.it\\02.txt",
+    "offer_hash": "98f5c5dae786e97fd4fd1b5e715b1599188e1f74a8578fbc0340a243c94e7eeb",
+    "timestamp": "2024-11-03 23:01:23.950416",
     "LLM_engine": "ollama"
 }

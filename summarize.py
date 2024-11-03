@@ -3,6 +3,7 @@ import pathlib
 import argparse
 import json
 import datetime
+import hashlib
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Summarize the job offer')
@@ -10,9 +11,17 @@ def parse_args():
     parser.add_argument('-offer_path', required=True, type=str, help='Path to the offer file')
     parser.add_argument('-output_path', required=True, type=str, help='Output path for the summary')
     parser.add_argument('-model', required=False, type=str, default='qwen2.5:0.5b', help='Model to use for summarization')
+    parser.add_argument('-verobosity', required=False, type=int, default=False, help='Verbose mode: 0 - silent, 1 - print system messages, 2 - print system messages and model outputs')
     return parser.parse_args()
 
-def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verbose=False):
+# calculate sha256 hash of a file, read in binary mode
+def calculate_file_hash(path):
+    with open(path, 'rb') as file:
+        file_hash = hashlib.sha256(file.read())
+    return file_hash.hexdigest()
+    
+
+def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verobosity=0):
 
     prompt = prompt.replace(offer_placeholder, offer)
 
@@ -26,7 +35,7 @@ def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verbose=
     response = ""
     for chunk in stream:
         response += chunk['response']
-        if verbose:
+        if verobosity > 1:
             print(chunk['response'], end='', flush=True)
         
         if chunk['done']:
@@ -42,11 +51,11 @@ def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verbose=
             "info": info ,
             }
 
-def handle_summarization(prompt_path, offer_path, output_path, model, offer_placeholder="${OFFER}", verbose=False):
+def handle_summarization(prompt_path, offer_path, output_path, model, offer_placeholder="${OFFER}", verbosity=0):
     prompt = open(prompt_path, 'r').read()
-    offer = open(offer_path, 'r').read()
+    offer = open(offer_path, 'r', encoding="utf8").read()
 
-    summarization_result = summarize_offer(prompt, offer, model, offer_placeholder, verbose)
+    summarization_result = summarize_offer(prompt, offer, model, offer_placeholder, verbosity)
 
     response = json.loads(summarization_result["response"])
 
@@ -54,8 +63,9 @@ def handle_summarization(prompt_path, offer_path, output_path, model, offer_plac
         'offer_summary': response,
         'info': summarization_result['info'],
         'model': model,
-        'prompt_path': prompt_path,
-        'offer_path': offer_path,
+        'prompt_path': str(prompt_path),
+        'offer_path': str(offer_path),
+        'offer_hash': calculate_file_hash(offer_path),
         'timestamp' : datetime.datetime.now().isoformat(' '),
         'LLM_engine': 'ollama',
     }
@@ -69,4 +79,4 @@ if __name__ == '__main__':
 
     parsed_args = parse_args()
 
-    handle_summarization(parsed_args.prompt_path, parsed_args.offer_path, parsed_args.output_path, parsed_args.model, verbose=True)
+    handle_summarization(parsed_args.prompt_path, parsed_args.offer_path, parsed_args.output_path, parsed_args.model, verbosity=parsed_args.verobosity)
