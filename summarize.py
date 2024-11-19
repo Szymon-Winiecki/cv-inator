@@ -47,7 +47,7 @@ def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verobosi
             "info": info ,
             }
 
-def handle_summarization(prompt_path, offer_path, output_path, model, offer_placeholder="${OFFER}", verbosity=0):
+def handle_summarization(prompt_path, offer_id, offer_path, output_path, model, offer_placeholder="${OFFER}", verbosity=0):
     prompt = open(prompt_path, 'r').read()
     offer = open(offer_path, 'r', encoding="utf8").read()
     offer = json.dumps(json.loads(offer)['offer'])
@@ -62,6 +62,7 @@ def handle_summarization(prompt_path, offer_path, output_path, model, offer_plac
         'model': model,
         'prompt_path': str(prompt_path),
         'prompt_hash': calculate_file_hash(prompt_path),
+        'offer_id': offer_id,
         'offer_path': str(offer_path),
         'offer_hash': calculate_file_hash(offer_path),
         'timestamp' : datetime.datetime.now().isoformat(' '),
@@ -77,4 +78,4 @@ if __name__ == '__main__':
 
     parsed_args = parse_args()
 
-    handle_summarization(parsed_args.prompt_path, parsed_args.offer_path, parsed_args.output_path, parsed_args.model, verbosity=parsed_args.verobosity)
+    handle_summarization(parsed_args.prompt_path, 999999999999, parsed_args.offer_path, parsed_args.output_path, parsed_args.model, verbosity=parsed_args.verobosity)

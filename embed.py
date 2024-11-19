@@ -33,6 +33,8 @@ if __name__ == '__main__':
     for file_ind, file in enumerate(input_files):
         offer = json.load(open(file, 'r'))['offer_summary']
         for field_ind, field in enumerate(fields_to_compare):
+            if not field in offer:
+                offer[field] = 'N/A'
             text = ", ".join(offer[field]) if type(offer[field]) == list else offer[field]
             embeddings[file_ind, field_ind] = model.encode(text)
 
