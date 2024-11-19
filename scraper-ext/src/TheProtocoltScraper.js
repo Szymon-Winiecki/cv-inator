@@ -16,15 +16,15 @@ class TheProtocolItScraper extends Scraper {
     }
 
     #fieldExtractor = new Map([
-        ["Offer title", () => this.#scrapOfferTitle()],
-        ["Company", () => this.#scrapCompany()],
-        ["Salary", () => this.#scrapSalary()],
-        ["Contract", () => this.#scrapContract()],
-        ["Location", () => this.#scrapLocation()],
-        ["Experience", () => this.#scrapExperienceLevel()],
-        ["expected technologies", () => this.#scrapExpectedTechnologies()],
-        ["optional technologies", () => this.#scrapOptionalTechnologies()],
-        ["Offer content", () => this.#scrapOfferContent()],
+        ["offer_title", () => this.#scrapOfferTitle()],
+        ["company", () => this.#scrapCompany()],
+        ["salary", () => this.#scrapSalary()],
+        ["contract", () => this.#scrapContract()],
+        ["location", () => this.#scrapLocation()],
+        ["experience", () => this.#scrapExperienceLevel()],
+        ["expected_technologies", () => this.#scrapExpectedTechnologies()],
+        ["optional_technologies", () => this.#scrapOptionalTechnologies()],
+        ["offer_content", () => this.#scrapOfferContent()],
     ])
     
     #scrapOfferTitle() {
@@ -165,10 +165,10 @@ class TheProtocolItScraper extends Scraper {
     
     
     #scrapOffer() {
-        let offer = "";
+        let offer = new Map();
         
         for (const [key, value] of this.#fieldExtractor) {
-            offer += `${key}: ${value()}\n`;
+            offer.set(key, value());
         }
     
         return offer;
