@@ -1,0 +1,23 @@
+{
+    "offer_summary": {
+        "job_title": "Fullstack Developers (JS/TS/Node.js)",
+        "company_name": "emagine sp. z o.o.",
+        "location": "Warszawa, Mokot\u00f3w",
+        "salary_range": "N/A",
+        "employment_type": "Full-time",
+        "experience_level": "mid",
+        "industry": "Fintech",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "\nAbout the project: \nIndustry: Fintech\nWork model: flexible hybrid (Warsaw office)\nContract\u2019s length: B2B, long-term cooperation\nProject language: English\nStart: ASAP / 1 month notice period\n\nYour responsibilities: \n - We are on the road to growing our hub in Warsaw, so we are looking for FullStack Engineers with JS, TS and Node.js who believe that you work better with people you can see face to face.\n - Joining the team is a unique opportunity to work with modern financial systems with large scale, high availability and resilience. The company has open positions in multiple domains across the organization, the largest of which are: Card and Banking, Decisioning Banking servicing, Engineering Platform, Partner Operations and Product, Payment Method and Shopping Experience.\n\nOur requirements: \n - At least 4+ years of experience.\n - Javascript/Typescript solid experience.\n - Framework Knowledge: React.js (front-end) or Node.js (back-end), Redux (state management), Context API, Hook.\n - CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel.\n - Experience with NoSQL databases (MongoDB, Firebase), SQL. Handling databases in backend systems using Node.js.\n - Familiarity with serverless architecture (e.g., AWS). Experience with AWS services and cloud infrastructure in projects.\n - System Design Focus, especially for senior engineers, assess their ability to design scalable, maintainable systems through architecture discussions. Requirement: Frontend: Focus on scalability, performance, state management, and API integration in React.js. Backend: Focus on designing scalable, event-driven systems with Node.js\n - Adaptability to different team dynamics.\n - English at min. B2 level.\n - Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies."
+    },
+    "info": {},
+    "model": "qwen2.5:0.5b",
+    "prompt_path": "prompt.txt",
+    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "offer_id": "3",
+    "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\03.json",
+    "offer_hash": "7f5c6cb5711a9095af2986bf587a2a4c8749c1d6953e84e1c5b53b4ac3422889",
+    "timestamp": "2024-11-20 00:08:23.122912",
+    "LLM_engine": "ollama"
+}

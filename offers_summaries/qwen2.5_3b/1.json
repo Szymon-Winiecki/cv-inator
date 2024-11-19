@@ -1,0 +1,62 @@
+{
+    "offer_summary": {
+        "job_title": "Engineering Manager (JavaScript/SAP Hybris)",
+        "company_name": "GPC GLOBAL TECHNOLOGY CENTER",
+        "location": "hybrid work - Krak\u00f3w, Grzeg\u00f3rki",
+        "salary_range": "N/A",
+        "employment_type": "Full-time",
+        "experience_level": "Manager",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "This is an engineering leadership role responsible for implementing the technology strategy and execution for digital platforms (e-commerce) that align with our product strategy and meet business goals. The candidate must have a deep understanding of modern technology stacks, focus on customer experience, and demonstrate success in software development and delivering strategic solutions.",
+        "requirements": [
+            "[10+ years' experience working in software development]",
+            "[5+ years of leading technology teams]",
+            "[Proven track record of building technology development teams is mandatory]"
+        ],
+        "requiered_skills": [
+            "[A broad understanding of IT principles, frameworks and methodologies including TOGAF, Agile, Scrum, DevOps, ITIL with extensive experience planning and managing complex technology projects utilising these methodologies]",
+            "[A Comprehensive understanding of cloud technologies, AWS a must]",
+            "[Proficient in DevOps practices]",
+            "[Experience across Java script frontend technologies, SAP Hybris and Commerce tools]"
+        ],
+        "nice_to_have_skills": [
+            "[Experience working across multiple time zones]",
+            "[10+ years working in complex eCommerce organisations]",
+            "[A passion for innovation, technology, and digital transformation]",
+            "[Strong leadership capability demonstrated through previous experience leading IT teams, where you have motivated and cultivated a team of professionals]",
+            "[Passion for eCommerce and Digital solutions]"
+        ],
+        "benefits": [
+            "[Sharing the costs of sports activities]",
+            "[Private medical care]",
+            "[Sharing the costs of professional training & courses]",
+            "[Life insurance]",
+            "[Coffee / Tea]",
+            "[Meal passes]",
+            "[Sharing the commuting costs]",
+            "[Extra leave]",
+            "[Work in international teams]",
+            "[Friendly atmosphere]",
+            "[Copyrights for IT roles]",
+            "[Hybrid work]"
+        ]
+    },
+    "info": {
+        "total_duration": 36870319200,
+        "load_duration": 3266215300,
+        "prompt_eval_count": 1214,
+        "prompt_eval_duration": 883730000,
+        "eval_count": 466,
+        "eval_duration": 32710530000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": "prompt.txt",
+    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "offer_id": "1",
+    "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\00.json",
+    "offer_hash": "54e83ff97e69d97d61668f972203395ab2712cdc928c8e4e0798871affa59fb0",
+    "timestamp": "2024-11-20 00:13:15.947011",
+    "LLM_engine": "ollama"
+}

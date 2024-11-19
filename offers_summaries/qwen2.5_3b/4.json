@@ -1,0 +1,60 @@
+{
+    "offer_summary": {
+        "job_title": "Lead Software Engineer (Python)",
+        "company_name": "GPC GLOBAL TECHNOLOGY CENTER",
+        "location": "hybrid work - Krak\u00f3w, Grzegorzki",
+        "salary_range": "N/A",
+        "employment_type": "contract of employment (full-time)",
+        "experience_level": "mid",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "We are seeking a Lead Software Engineer to lead and mentor a talented technical team in the exploration and implementation of Generative AI and other innovative new technologies. The ideal candidate will design and whiteboard solutions, collaborate with cross-functional teams, and guide the full lifecycle of development from initial design to production deployment.",
+        "requirements": [
+            "[Bachelor\u2019s degree in Computer Science, Engineering, or related field]",
+            "[Minimum of 4-5 years of experience in technical leadership]",
+            "[Passion for learning and applying new technologies]",
+            "[Excellent communication, collaboration, and problem-solving skills]",
+            "[Extensive hands-on experience deploying scalable cloud-based solutions]"
+        ],
+        "requiered_skills": [
+            "[Google Cloud Platform (GCP)]",
+            "[Proficient in Google Cloud Platform services like Vertex AI]",
+            "[Experience with Generative AI]"
+        ],
+        "nice_to_have_skills": [
+            "[Experience with data analytics]",
+            "[Experience building and deploying machine learning models]"
+        ],
+        "benefits": [
+            "[Sharing the costs of sports activities]",
+            "[Private medical care]",
+            "[Sharing the costs of professional training & courses]",
+            "[Life insurance]",
+            "[Coffee / Tea]",
+            "[Meal passes]",
+            "[Sharing the commuting costs]",
+            "[Extra leave]",
+            "[Work in international teams]",
+            "[Friendly atmosphere]",
+            "[Copyrights for IT roles]",
+            "[Hybrid work]"
+        ]
+    },
+    "info": {
+        "total_duration": 48051790500,
+        "load_duration": 35457800,
+        "prompt_eval_count": 1225,
+        "prompt_eval_duration": 2122256000,
+        "eval_count": 402,
+        "eval_duration": 45892699000
+    },
+    "model": "qwen2.5:3b",
+    "prompt_path": "prompt.txt",
+    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "offer_id": "4",
+    "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\04.json",
+    "offer_hash": "f2000466e667aec1e5a5cacfecd70b61518b4be28f2ba9cc6c537e727c92ec7d",
+    "timestamp": "2024-11-20 00:14:36.341448",
+    "LLM_engine": "ollama"
+}

@@ -1,0 +1,58 @@
+{
+    "offer_summary": {
+        "job_title": "Lead Software Engineer (Python)",
+        "company_name": "GPC GLOBAL TECHNOLOGY CENTER",
+        "location": "hybrid work - Krak\u00f3w, Grzeg\u00f3rzki",
+        "salary_range": "N/A",
+        "employment_type": "contract of employment (full-time)",
+        "experience_level": "mid",
+        "industry": "Information Technology",
+        "posting_date": "N/A",
+        "application_deadline": "N/A",
+        "job_description": "An innovative Lead Software Engineer is needed to focus on Generative AI and Cloud solutions, particularly Google Cloud Platform (GCP) and Vertex AI.",
+        "requirements": [
+            "Bachelor's degree in Computer Science, Engineering or related field",
+            "Minimum of 4-5 years of experience in technical leadership",
+            "Proficient in Google Cloud Platform (GCP)",
+            "Passion for learning and applying new technologies",
+            "Excellent communication, collaboration, and problem-solving skills"
+        ],
+        "requierd_skills": [
+            "Extensive hands-on experience deploying scalable cloud-based solutions",
+            "Proficient in Python"
+        ],
+        "nice_to_have_skills": [
+            "Experience with Generative AI is a major plus"
+        ],
+        "benefits": [
+            "sharing the costs of sports activities",
+            "private medical care",
+            "sharing the costs of professional training & courses",
+            "life insurance",
+            "coffee / tea",
+            "meal passes",
+            "sharing the commuting costs",
+            "extra leave",
+            "work in international teams",
+            "friendly atmosphere",
+            "copyrights for IT roles",
+            "hybrid work"
+        ]
+    },
+    "info": {
+        "total_duration": 63161168200,
+        "load_duration": 6647400,
+        "prompt_eval_count": 1397,
+        "prompt_eval_duration": 5816829000,
+        "eval_count": 446,
+        "eval_duration": 57335117000
+    },
+    "model": "mistral",
+    "prompt_path": "prompt.txt",
+    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "offer_id": "4",
+    "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\04.json",
+    "offer_hash": "f2000466e667aec1e5a5cacfecd70b61518b4be28f2ba9cc6c537e727c92ec7d",
+    "timestamp": "2024-11-20 00:33:08.033006",
+    "LLM_engine": "ollama"
+}
