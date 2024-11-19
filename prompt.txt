@@ -17,7 +17,15 @@ Please summarize the following job offer in English and structure the output as 
 
 Ensure the response is formatted as valid JSON. If any information is missing in the job offer, use 'N/A' for the respective field.
 
+Use no more than 250 words for every field.
+
+Be concise and precise.
+
+Limit the response to a total of 1000 words or less.
+
 Put only JSON in response.
+
+Ensure all fields are fully filled with content from the job offer, without placeholders or square brackets [].
 
 Input: 
 
