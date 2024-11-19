@@ -1,9 +1,9 @@
 import argparse
-import hashlib
 from pathlib import Path
 import json
 
-from summarize import handle_summarization, calculate_file_hash
+from summarize import handle_summarization
+from utils import calculate_file_hash
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Manage the summarization process')
@@ -18,13 +18,16 @@ def parse_args():
 def main():
     args = parse_args()
     for offer_dir, output_dir in zip(args.offer_dirs, args.output_dirs):
-        for offer_path in offer_dir.glob('*.txt'):
-            output_path = output_dir / offer_path.name.replace('.txt', '.json')
+        for offer_path in offer_dir.glob('*.json'):
+            output_path = output_dir / offer_path.name
             offer_hash = calculate_file_hash(offer_path)
             if args.m == 'update' and output_path.exists():
                 with open(output_path, 'r') as f:
                     summary = json.load(f)
-                    if 'offer_hash' in summary and summary['offer_hash'] == offer_hash:
+                    if 'offer_hash' in summary and summary['offer_hash'] == offer_hash and \
+                        'model' in summary and summary['model'] == args.model and \
+                        'prompt_hash' in summary and summary['prompt_hash'] == calculate_file_hash(args.prompt_path):
+                        
                         if (args.verbosity > 0):
                             print(f"Summary for {offer_path} already exists and is up to date")
                         continue

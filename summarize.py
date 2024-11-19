@@ -3,7 +3,8 @@ import pathlib
 import argparse
 import json
 import datetime
-import hashlib
+
+from utils import calculate_file_hash
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Summarize the job offer')
@@ -13,12 +14,6 @@ def parse_args():
     parser.add_argument('-model', required=False, type=str, default='qwen2.5:0.5b', help='Model to use for summarization')
     parser.add_argument('-verobosity', required=False, type=int, default=False, help='Verbose mode: 0 - silent, 1 - print system messages, 2 - print system messages and model outputs')
     return parser.parse_args()
-
-# calculate sha256 hash of a file, read in binary mode
-def calculate_file_hash(path):
-    with open(path, 'rb') as file:
-        file_hash = hashlib.sha256(file.read())
-    return file_hash.hexdigest()
     
 
 def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verobosity=0):
@@ -28,6 +23,7 @@ def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verobosi
     stream = ollama.generate(
         model=model,
         prompt=prompt,
+        format="json",
         stream=True,
     )
 
@@ -54,6 +50,7 @@ def summarize_offer(prompt, offer, model, offer_placeholder="${OFFER}", verobosi
 def handle_summarization(prompt_path, offer_path, output_path, model, offer_placeholder="${OFFER}", verbosity=0):
     prompt = open(prompt_path, 'r').read()
     offer = open(offer_path, 'r', encoding="utf8").read()
+    offer = json.dumps(json.loads(offer)['offer'])
 
     summarization_result = summarize_offer(prompt, offer, model, offer_placeholder, verbosity)
 
@@ -64,6 +61,7 @@ def handle_summarization(prompt_path, offer_path, output_path, model, offer_plac
         'info': summarization_result['info'],
         'model': model,
         'prompt_path': str(prompt_path),
+        'prompt_hash': calculate_file_hash(prompt_path),
         'offer_path': str(offer_path),
         'offer_hash': calculate_file_hash(offer_path),
         'timestamp' : datetime.datetime.now().isoformat(' '),
