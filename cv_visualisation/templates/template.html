@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>CV - {{ profile.personal_info.name }}</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <!-- Header -->
+        <div class="text-center border-b-4 border-blue-500 pb-4">
+            <h1 class="text-4xl font-bold text-blue-600">{{ profile.personal_info.name }}</h1>
+            <p class="text-xl text-gray-700">{{ profile.personal_info.title }}</p>
+            <p class="text-gray-500"><i class="fas fa-map-marker-alt"></i> {{ profile.personal_info.location }}</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="mt-6 flex justify-evenly text-center text-gray-700">
+            <p><i class="fas fa-envelope text-blue-500"></i> <a href="mailto:{{ profile.personal_info.email }}" class="text-blue-500">{{ profile.personal_info.email }}</a></p>
+            <p><i class="fas fa-phone-alt text-blue-500"></i> {{ profile.personal_info.phone }}</p>
+            <p><i class="fab fa-linkedin text-blue-500"></i> <a href="{{ profile.personal_info.linkedin }}" class="text-blue-500">LinkedIn</a></p>
+            <p><i class="fab fa-github text-blue-500"></i> <a href="{{ profile.personal_info.github }}" class="text-blue-500">GitHub</a></p>
+        </div>
+
+        <!-- About Me -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-user-circle"></i> About Me</h2>
+            <p class="mt-2 text-gray-700">{{ profile.about_me }}</p>
+        </div>
+
+        <!-- Tech Stack and Soft Skills -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-tools"></i> Stack & Skills</h2>
+            <div class="mt-4 flex justify-between gap-8">
+                <!-- Tech Stack -->
+                <div class="w-1/2 border-r pr-4">
+                    <h3 class="text-xl font-semibold text-gray-800"><i class="fas fa-code"></i> Tech Stack</h3>
+                    <p class="mt-2 font-semibold text-gray-600">
+                        {{ profile.tech_stack | join(" | ") }}
+                    </p>
+                </div>
+                <!-- Soft Skills -->
+                <div class="w-1/2 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-800"><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <p class="mt-2 font-semibold text-gray-600">
+                        {{ profile.soft_stack | join(" | ") }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-graduation-cap"></i> Education</h2>
+            {% for edu in profile.education %}
+            <div class="mt-4">
+                <p class="font-bold text-gray-800">{{ edu.institution }}</p>
+                <p class="text-gray-600 italic">{{ edu.degree }} in {{ edu.field_of_study }}</p>
+                <p class="text-gray-500">{{ edu.specialization }}</p>
+                <p class="text-gray-500">{{ edu.start_date }} - {{ edu.end_date }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Work Experience -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-briefcase"></i> Work Experience</h2>
+            {% for job in profile.work_experience %}
+            <div class="mt-4">
+                <p class="font-bold text-gray-800">{{ job.company }}</p>
+                <p class="text-gray-600 italic">{{ job.position }}</p>
+                <p class="text-gray-500">{{ job.start_date }} - {{ job.end_date }}</p>
+                <p class="mt-2 text-gray-700">{{ job.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Projects -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-project-diagram"></i> Projects</h2>
+            {% for project in profile.projects %}
+            <div class="mt-4 border-t pt-4">
+                <p>
+                    <span class="font-bold text-gray-800">{{ project.name }}</span>
+                    <span class="text-blue-500 mx-2"><i class="fab fa-github"></i> <a href="{{ project.github }}" class="text-blue-500">GitHub</a></span>
+                    {% if project.demo %}
+                    <span class="text-blue-500 mx-2"><i class="fas fa-external-link-alt"></i> <a href="{{ project.demo }}" class="text-blue-500">Demo</a></span>
+                    {% endif %}
+                </p>
+                <p class="text-gray-700">{{ project.description }}</p>
+                <p class="text-gray-600"><strong>Technologies:</strong> {{ project.tech_stack | join(", ") }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Certifications -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-certificate"></i> Certifications</h2>
+            {% for cert in profile.certifications %}
+            <div class="mt-4">
+                <p class="font-bold text-gray-800">{{ cert.name }}</p>
+                <p class="text-gray-600">{{ cert.authority }} ({{ cert.date }})</p>
+                <p class="text-gray-700">{{ cert.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Languages -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-blue-600"><i class="fas fa-language"></i> Languages</h2>
+            <p class="mt-2 text-gray-700">
+                {% for lang in profile.languages %}
+                {{ lang.language }} ({{ lang.proficiency }}){% if not loop.last %} | {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
