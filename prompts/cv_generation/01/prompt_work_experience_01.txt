@@ -1,0 +1,25 @@
+Analyze the following candidate profile and compare it to the provided job description.
+Improve a "Work Experience" section for a CV that is truthful to the candidate's profile and maximally attractive to the employer. Output in JSON format.
+Focus on the "description".
+Make it sounds naturally, not like machine-generated.
+Output in JSON format.
+
+Job offer:
+${OFFER}
+
+Candidate profile:
+${PROFILE}
+
+Output format:
+{
+    work_experience: [
+        {
+            "company": "Company",
+            "position": "Position",
+            "start_date": "start date",
+            "end_date": "end date",
+            "description": "description"
+        },
+        ...
+    ]
+}

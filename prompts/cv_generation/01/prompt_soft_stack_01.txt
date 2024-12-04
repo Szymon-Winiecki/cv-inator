@@ -1,0 +1,19 @@
+Analyze the following candidate profile and compare it to the provided job offer.
+Write "soft stack" section for a CV that is relevant to the candidate's profile and maximally attractive to the employer.
+It has to be just a list of skills, methodologies and techniques.
+Change the order on the list so that elements that are more attractive from the point of view of this offer are placed higher.
+Output in JSON format.
+
+Job offer:
+${OFFER}
+
+Candidate profile:
+${PROFILE}
+
+Output format:
+{
+    "soft_stack": [
+        "skill1",
+        ...
+    ]
+}

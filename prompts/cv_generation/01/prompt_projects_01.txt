@@ -1,0 +1,29 @@
+Analyze the following candidate profile and compare it to the provided job offer.
+Write "Projects" section for a CV that is relevant to the candidate's profile and maximally attractive to the employer.
+Make it sounds naturally, not like machine-generated.
+Change the order on the list so that projects that are more attractive from the point of view of this offer are placed higher.
+Improve descriptions.
+Output in JSON format.
+
+Job offer:
+${OFFER}
+
+Candidate profile:
+${PROFILE}
+
+Output format:
+{
+    "projects": [
+        {
+            "name": "project name",
+            "description": "project description",
+            "tech_stack": [
+                "tech1",
+                ...
+            ],
+            "github": "link to github",
+            "demo": "link to demo"
+        },
+        ...
+    ]
+}

@@ -1,0 +1,13 @@
+Review the following CV draft and suggest improvements to make it more aligned with the job description while staying truthful to the candidate’s qualifications. Output suggestions in JSON format.
+Make it sounds naturally, not like machine-generated.
+
+CV Draft:
+[Insert CV draft in JSON format]
+
+Job Description:
+[Insert job description in JSON format]
+
+Output in JSON format:
+{
+  "improvement_suggestions": ["[List of suggestions to improve alignment and presentation]"]
+}

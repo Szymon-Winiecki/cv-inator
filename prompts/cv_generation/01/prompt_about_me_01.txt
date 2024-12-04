@@ -1,0 +1,20 @@
+Analyze the following candidate profile and compare it to the provided job offer.
+TAke into account already generated CV draft.
+Write "about me" section for a CV that is truthful to the candidate's profile and maximally attractive to the employer.
+Ensure that it sounds naturally and is not too redundant with other sections.
+Make it sounds naturally, not like machine-generated.
+Output in JSON format.
+
+Job offer:
+${OFFER}
+
+Candidate profile:
+${PROFILE}
+
+CV draft:
+${DRAFT}
+
+Output format:
+{
+    "about_me": "about me"
+}
