@@ -4,9 +4,9 @@
         "company_name": "NETGURU S.A.",
         "location": "remote work - Nabari district, Russian Federation",
         "salary_range": "N/A",
-        "employment_type": "Contract (full-time)",
+        "employment_type": "B2B contract (full-time)",
         "experience_level": "senior",
-        "industry": "Information Technology",
+        "industry": "Information Technology/Fintech",
         "posting_date": "N/A",
         "application_deadline": "N/A",
         "job_description": "We are looking for Senior RoR Developer with JS and experience with email technologies like Mailgun or SparkPost. Required skills: Ruby on Rails, JavaScript, email technologies. We offer: 100% remote work, flextime & flexplace, dev-friendly processes, long-term collaboration.",
@@ -20,36 +20,37 @@
             "Strong problem solving skills, curiosity to dig deep, debug and solve issues.",
             "Knowledge of English (C1), spoken and written."
         ],
-        "requierd_skills": [
+        "required_skills": [
             "Ruby on Rails",
-            "JavaScript",
-            "email technologies"
+            "JavaScript"
         ],
         "nice_to_have_skills": [
-            "N/A"
+            "Ember.js"
         ],
         "benefits": [
-            "Flexibility: 100% remote work.",
-            "Professionality: dev-friendly processes, like Continuous Integration and Code Review, work in line with Agile methodology.",
-            "Diversity: projects from various industries like fintech, healthcare, insurance, or education.",
-            "Growth: work with a team of experts and continuous development of your hard and soft skills.",
-            "Knowledge: knowledge sharing sessions, internal knowledge base."
+            "100% remote work",
+            "Flextime & flexplace",
+            "Dev-friendly processes",
+            "Long-term collaboration",
+            "Continuous Integration and Code Review",
+            "Knowledge sharing sessions",
+            "Internal knowledge base"
         ]
     },
     "info": {
-        "total_duration": 45521518200,
-        "load_duration": 20391600,
-        "prompt_eval_count": 1047,
-        "prompt_eval_duration": 1824452000,
-        "eval_count": 390,
-        "eval_duration": 43674940000
+        "total_duration": 44739064400,
+        "load_duration": 24254800,
+        "prompt_eval_count": 1067,
+        "prompt_eval_duration": 1717591000,
+        "eval_count": 385,
+        "eval_duration": 42994421000
     },
     "model": "llama3.2",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "172fac376009ca2997ba5ca16a715a9423a90e14e1ab6ac57000c1e524c68044",
     "offer_id": "2",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\01.json",
     "offer_hash": "46fc92a59d5a3dd2cd444be6b1eedae6d26faed82e9cdad2594917afd6674d11",
-    "timestamp": "2024-11-20 00:36:02.141108",
+    "timestamp": "2025-01-09 18:29:46.972924",
     "LLM_engine": "ollama"
 }

@@ -2,55 +2,45 @@
     "offer_summary": {
         "job_title": "Freelance Senior RoR Developer with JS",
         "company_name": "NETGURU S.A.",
-        "location": "Remote work - worldwide",
-        "salary_range": "N/A",
+        "location": "Remote work - Poland timezone",
+        "salary_range": "Not specified",
         "employment_type": "B2B contract (full-time)",
         "experience_level": "Senior",
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "We are looking for a Senior RoR Developer with JS experience, especially in email technologies like Mailgun or SparkPost.",
+        "job_description": "Seeking Senior RoR Developer with JS and email technologies experience for a 6-month, full-time freelance assignment.",
         "requirements": [
             "At least 5 years' experience and advanced knowledge of Ruby and Ruby on Rails development.",
             "Solid basics of JavaScript (experience with Ember.js would be beneficial).",
-            "Experience with email technologies like Mailgun or SparkPost would be beneficial.",
-            "Highly developed communication skills required.",
-            "Worked closely with clients and maintained positive relationships with them.",
-            "A high sense of responsibility and accountability for work.",
-            "Strong problem solving skills, curiosity to dig deep, debug and solve issues.",
-            "An attitude not just to ship small patches, but finding the root cause and fixing them.",
-            "Knowledge of English (C1), spoken and written."
+            "Experience with email technologies like Mailgun or SparkPost would be beneficial."
         ],
         "requierd_skills": [
             "Ruby on Rails",
-            "JavaScript",
-            "email technologies"
+            "JavaScript"
         ],
-        "nice_to_have_skills": [
-            "Experience with Ember.js"
-        ],
+        "nice_to_have_skills": [],
         "benefits": [
             "100% remote work",
             "Flexitime & flexplace",
-            "dev-friendly processes",
-            "Long-term collaboration",
-            "Projects from various industries"
+            "Dev-friendly processes",
+            "Long-term collaboration"
         ]
     },
     "info": {
-        "total_duration": 78310330900,
-        "load_duration": 7716200,
-        "prompt_eval_count": 1273,
-        "prompt_eval_duration": 5080119000,
-        "eval_count": 453,
-        "eval_duration": 73221986000
+        "total_duration": 58151661800,
+        "load_duration": 22242900,
+        "prompt_eval_count": 1297,
+        "prompt_eval_duration": 3848017000,
+        "eval_count": 332,
+        "eval_duration": 54278268000
     },
     "model": "mistral",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "8fc567b96b5c4e931bc2c094514d023fdaceb3989e3266f1620d02de8772700f",
     "offer_id": "2",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\01.json",
     "offer_hash": "46fc92a59d5a3dd2cd444be6b1eedae6d26faed82e9cdad2594917afd6674d11",
-    "timestamp": "2024-11-20 00:29:50.725545",
+    "timestamp": "2025-01-09 09:30:18.646835",
     "LLM_engine": "ollama"
 }

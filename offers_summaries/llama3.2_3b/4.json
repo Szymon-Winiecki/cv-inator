@@ -9,23 +9,16 @@
         "industry": "Information Technology",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies. The ideal candidate will have a unique blend of leadership, technical expertise, and a passion for new technology. Your role will be central to understanding the applicability of Generative AI for our company's unique use cases, and you will be instrumental in bringing Cloud solutions from development to production.",
+        "job_description": "We are seeking an innovative and hands-on Engineering Tech Lead to join our team, focusing on the exploration and implementation of Generative AI and other innovative new technologies.",
         "requirements": [
             "Bachelor\u2019s degree in Computer Science, Engineering, or related field.",
-            "Minimum of 4-5 years of experience in technical leadership, with a strong focus on Cloud solutions and development-to-production lifecycle.",
-            "Passion for learning and applying new technologies, with the ability to inspire and drive innovation within the team.",
-            "Excellent communication, collaboration, and problem-solving skills.",
-            "Extensive hands-on experience deploying scalable cloud-based solutions.",
-            "Proficient in Google Cloud Platform (GCP), particularly in leveraging services like Vertex AI and other GCP offerings to build, deploy, and manage robust data-driven solutions.",
-            "Experience with Generative AI is a major plus."
+            "Minimum of 4-5 years of experience in technical leadership, with a strong focus on Cloud solutions and development-to-production lifecycle."
         ],
-        "requierd_skills": [
+        "required_skills": [
             "Python",
-            "Generative AI"
+            "Google Cloud Platform (GCP)"
         ],
-        "nice_to_have_skills": [
-            "Other innovative new technologies"
-        ],
+        "nice_to_have_skills": [],
         "benefits": [
             "sharing the costs of sports activities",
             "private medical care",
@@ -42,19 +35,19 @@
         ]
     },
     "info": {
-        "total_duration": 13860442200,
-        "load_duration": 32288000,
-        "prompt_eval_count": 1213,
-        "prompt_eval_duration": 617111000,
-        "eval_count": 438,
-        "eval_duration": 13208218000
+        "total_duration": 34141108000,
+        "load_duration": 36920800,
+        "prompt_eval_count": 1233,
+        "prompt_eval_duration": 2115119000,
+        "eval_count": 308,
+        "eval_duration": 31987171000
     },
     "model": "llama3.2",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "172fac376009ca2997ba5ca16a715a9423a90e14e1ab6ac57000c1e524c68044",
     "offer_id": "4",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\04.json",
     "offer_hash": "f2000466e667aec1e5a5cacfecd70b61518b4be28f2ba9cc6c537e727c92ec7d",
-    "timestamp": "2024-11-20 00:36:39.753462",
+    "timestamp": "2025-01-09 18:31:10.825651",
     "LLM_engine": "ollama"
 }
