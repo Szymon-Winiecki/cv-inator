@@ -2,12 +2,15 @@ import streamlit as st
 from pathlib import Path
 import json
 from datetime import datetime
+import os
 
 PROJECT_ROOT_DIR = Path(__file__).resolve().parents[1]
 
 # Path to the job offers index file
 OFFERS_INDEX_PATH = PROJECT_ROOT_DIR / "offers" / "index.json" 
 COMPARISON_RECORDS_DIR = PROJECT_ROOT_DIR / "human_comparisons" / "offers_similarity"
+CV_DATA_DIR = PROJECT_ROOT_DIR / "users_cv_data"
+
 
 @st.cache_data
 def load_offers_list():
@@ -69,6 +72,16 @@ def add_comparison_record(username, main_offer, compared_offers, selected_offer)
     with open(path, "w") as file:
         json.dump(records, file)
 
+def save_cv_data(username, data):
+    path = CV_DATA_DIR / f"{username}.json"
+
+    if not path.parent.exists():
+        path.parent.mkdir(parents=True)
+    with open(path, "w") as file:
+        json.dump(data, file)
+        return True
+    return False
+
 def remove_comparison_record(username, index):
     path = COMPARISON_RECORDS_DIR / f"{username}.json"
 
@@ -82,3 +95,29 @@ def remove_comparison_record(username, index):
 
     with open(path, "w") as file:
         json.dump(records, file)
+
+def load_cv_data(username):
+    full_path = CV_DATA_DIR / f"{username}.json"
+    
+    if os.path.exists(full_path):
+        with open(full_path, 'r') as f:
+            data = json.load(f)
+            if data is not None:
+                return data
+    data = {    
+        "profile": {
+        "personal_info": {},
+        "tech_stack": [],
+        "soft_stack": [],
+        "education": [],
+        "work_experience": [],
+        "projects": [],
+        "certifications": [],
+        "languages": [],
+        "about_me": ""
+            }
+    }
+    return data
+
+
+

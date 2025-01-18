@@ -13,3 +13,9 @@ python .\generate_cv.py -prompt_path .\prompts\cv_generation\prompt_pack_01.json
 ```
 python .\cv_visualisation\generate.py -template_path .\cv_visualisation\templates\template.html -cv_path .\generated_cv\01.json -output_path .\cv_visualisation\output\01.html
 ```
+
+### embeddings calculation
+
+```
+python embed.py -input_dir offers_summaries\llama3.2_3b -output_dir alg_comparation_output\embedings\llama3.2_3b
+```

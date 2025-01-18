@@ -22,6 +22,15 @@ pip install -U "sentence-transformers[onnx-gpu] @ git+https://github.com/UKPLab/
 pip install Jinja2
 ```
 
+### install local cv-inator packages
+
+in the root project dir:
+
+```
+pip install -e cvinatordatamanager
+pip install -e cvinatorprocessingtools
+```
+
 ## Usage
 
 ### Scrapper

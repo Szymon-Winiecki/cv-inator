@@ -11,8 +11,8 @@ Please summarize the following job offer in English and structure the output as 
     application_deadline: The deadline for applying if provided (use 'N/A' if not available).
     job_description: A short, concise description of the job and main responsibilities (2-3 sentences).
     requirements: A bullet-point list of qualifications, skills, and experience required for the role.
-    requierd_skills: A bullet-point list of specific skills required for the role.
-    nice_to_have_skills: A bullet-point list of specific skills nice-to-have for the role.
+    required_skills: A bullet-point list of specific skills required for the role. Use only short names of technologies or methods. No sentences.
+    nice_to_have_skills: A bullet-point list of specific skills nice-to-have for the role. Use only short names of technologies or methods. No sentences.
     benefits: A bullet-point list of benefits or perks offered by the employer.
 
 Ensure the response is formatted as valid JSON. If any information is missing in the job offer, use 'N/A' for the respective field.
@@ -31,4 +31,4 @@ Input:
 
 ${OFFER}
 
-Output (example format): { "job_title": "[Job Title]", "company_name": "[Company Name]", "location": "[Location]", "salary_range": "[Salary Range]", "employment_type": "[Employment Type]", "experience_level": "[Experience Level]", "industry": "[Industry]", "posting_date": "[Posting Date]", "application_deadline": "[Application Deadline]", "job_description": "[Short job description]", "requirements": [ "[Requirement 1]", "[Requirement 2]" ], "requierd_skills": [ "[Skill 1]", "[Skill 2]" ], "nice_to_have_skills": [ "[Skill 1]", "[Skill 2]" ], "benefits": [ "[Benefit 1]", "[Benefit 2]" ] }
+Output (example format): { "job_title": "[Job Title]", "company_name": "[Company Name]", "location": "[Location]", "salary_range": "[Salary Range]", "employment_type": "[Employment Type]", "experience_level": "[Experience Level]", "industry": "[Industry]", "posting_date": "[Posting Date]", "application_deadline": "[Application Deadline]", "job_description": "[Short job description]", "requirements": [ "[Requirement 1]", "[Requirement 2]" ], "required_skills": [ "[Skill 1]", "[Skill 2]" ], "nice_to_have_skills": [ "[Skill 1]", "[Skill 2]" ], "benefits": [ "[Benefit 1]", "[Benefit 2]" ] }

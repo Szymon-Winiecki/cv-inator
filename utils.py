@@ -2,6 +2,7 @@ import hashlib
 from pathlib import Path
 import json
 from datetime import datetime
+import ollama
 
 PROJECT_ROOT_DIR = Path(__file__).resolve().parents[0]
 
@@ -37,3 +38,31 @@ def calculate_file_hash(path):
     with open(path, 'rb') as file:
         file_hash = hashlib.sha256(file.read())
     return file_hash.hexdigest()
+
+def execute_prompt(prompt, model, verbosity=0):
+    stream = ollama.generate(
+        model=model,
+        prompt=prompt,
+        format="json",
+        stream=True,
+    )
+
+    info = {}
+    response = ""
+    for chunk in stream:
+        response += chunk['response']
+        if verbosity > 1:
+            print(chunk['response'], end='', flush=True)
+        
+        if chunk['done']:
+            info['total_duration'] = chunk['total_duration']
+            info['load_duration'] = chunk['load_duration']
+            info['prompt_eval_count'] = chunk['prompt_eval_count']
+            info['prompt_eval_duration'] = chunk['prompt_eval_duration']
+            info['eval_count'] = chunk['eval_count']
+            info['eval_duration'] = chunk['eval_duration']
+
+    return {
+            "response": response, 
+            "info": info ,
+            }

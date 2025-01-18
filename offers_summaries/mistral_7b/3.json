@@ -9,29 +9,36 @@
         "industry": "Fintech",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "Join a fintech company seeking FullStack Engineers with JS, TS and Node.js for long-term cooperation in a hybrid work model.",
+        "job_description": "Join a Fintech company as a Fullstack Developer (JS/TS/Node.js) for long-term cooperation with flexible hybrid work in Warsaw, focusing on modern financial systems.",
         "requirements": [
             "At least 4+ years of experience",
             "Javascript/Typescript solid experience",
             "Framework Knowledge: React.js (front-end) or Node.js (back-end), Redux (state management), Context API, Hook",
-            "CI/CD Experience",
-            "Experience with npm or yarn. Familiarity with Webpack and Babel",
-            "Experience with NoSQL databases (MongoDB, Firebase), SQL",
-            "Familiarity with serverless architecture (e.g., AWS)",
-            "Adaptability to different team dynamics",
-            "English at min. B2 level",
-            "Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies"
+            "CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel",
+            "Experience with NoSQL databases (MongoDB, Firebase), SQL. Handling databases in backend systems using Node.js",
+            "Familiarity with serverless architecture (e.g., AWS). Experience with AWS services and cloud infrastructure in projects",
+            "Adaptability to different team dynamics.",
+            "English at min. B2 level.",
+            "Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies."
         ],
         "requierd_skills": [
-            "Knowledge: React.js (front-end) or Node.js (back-end)",
-            "Redux (state management), Context API, Hook",
-            "Experience with NoSQL databases (MongoDB, Firebase), SQL"
+            "React.js",
+            "Node.js"
         ],
         "nice_to_have_skills": [
-            "Familiarity with serverless architecture (e.g., AWS)",
-            "System Design Focus"
+            "Redux",
+            "Context API",
+            "Hook",
+            "MongoDB",
+            "Firebase",
+            "SQL",
+            "AWS"
         ],
         "benefits": [
+            "Challenging international projects in a Scandinavian business culture",
+            "Transparently built relations based on trust and fair play",
+            "Flexible working hours",
+            "Co-financed benefits: Medicover card, Multisport card",
             "sharing the costs of sports activities",
             "private medical care",
             "sharing the costs of foreign language classes",
@@ -41,19 +48,19 @@
         ]
     },
     "info": {
-        "total_duration": 134128695300,
-        "load_duration": 6168800,
-        "prompt_eval_count": 1381,
-        "prompt_eval_duration": 5985932000,
-        "eval_count": 539,
-        "eval_duration": 128135354000
+        "total_duration": 107386406300,
+        "load_duration": 22297500,
+        "prompt_eval_count": 1405,
+        "prompt_eval_duration": 4968113000,
+        "eval_count": 600,
+        "eval_duration": 102392976000
     },
     "model": "mistral",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "8fc567b96b5c4e931bc2c094514d023fdaceb3989e3266f1620d02de8772700f",
     "offer_id": "3",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\03.json",
     "offer_hash": "7f5c6cb5711a9095af2986bf587a2a4c8749c1d6953e84e1c5b53b4ac3422889",
-    "timestamp": "2024-11-20 00:32:04.862636",
+    "timestamp": "2025-01-09 09:32:06.048687",
     "LLM_engine": "ollama"
 }

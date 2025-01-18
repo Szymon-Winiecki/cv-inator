@@ -1,0 +1,14 @@
+{
+    "embedded_fields": [
+        "job_title",
+        "job_description",
+        "requirements",
+        "requiered_skills",
+        "nice_to_have_skills",
+        "benefits"
+    ],
+    "input_file": "offers_summaries\\llama3.2_3b\\3.json",
+    "input_file_hash": "1f8f30db1f0efc1d3ce5251dbbbdf000f6d9c7c3d00732fa05e4fba8a9d873bd",
+    "model": "paraphrase-albert-small-v2",
+    "timestamp": "2025-01-09 10:15:33.702274"
+}

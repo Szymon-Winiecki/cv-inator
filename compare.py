@@ -1,83 +1,56 @@
 import argparse
 from pathlib import Path
 import json
-import numpy as np
-import matplotlib.pyplot as plt
-from sentence_transformers import SentenceTransformer
-from sklearn.decomposition import PCA
+
+from OffersComparator import OffersComparator
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Summarize the job offer')
-    parser.add_argument('-input_path', required=True, type=str, help='Path to the embeddings file')
-    parser.add_argument('-output_dir', required=True, type=str, help='Direcotry for saving the output')
+    parser.add_argument('-input_dir', '-i', required=True, type=Path, help='Directory with embeddings files')
+    parser.add_argument('-output_dir', '-o', required=True, type=Path, help='Direcotry for saving the output')
+    parser.add_argument('-to_offer', '-to', type=int, default=-1, help='Index of the offer to compare with others')
     return parser.parse_args()
 
-def plot_similarity(similarities, labels, output_path):
-    fig, ax = plt.subplots()
-    cax = ax.matshow(similarities, cmap='viridis')
-    plt.colorbar(cax)
 
-    ax.set_xticks(np.arange(len(labels)))
-    ax.set_yticks(np.arange(len(labels)))
 
-    ax.set_xticklabels([f.name for f in labels])
-    ax.set_yticklabels([f.name for f in labels])
 
-    for i in range(len(labels)):
-        for j in range(len(labels)):
-            text = ax.text(j, i, round(similarities[i, j], 2), ha='center', va='center', color='w')
-
-    plt.savefig(output_path)
-
-def plot_pca(embeddings, labels, output_path):
-    pca = PCA(n_components=2)
-    embeddings_pca = pca.fit_transform(embeddings)
-
-    fig, ax = plt.subplots()
-    for i in range(len(labels)):
-        ax.scatter(embeddings_pca[i, 0], embeddings_pca[i, 1], label=labels[i].name)
-        ax.annotate(labels[i].name, (embeddings_pca[i, 0], embeddings_pca[i, 1]))
-    
-    ax.legend()
-    plt.savefig(output_path)
-
-if __name__ == '__main__':
-
+def main():
     parsed_args = parse_args()
 
-    embeddings = np.load(parsed_args.input_path)
+    
+    ###
+    # methods of comparison:
+    # - embeddings similarity
+    # - list compatibility
+    ###
 
-    info_file = parsed_args.input_path.replace('.npy', '_info.json')
-    embeddings_info = json.load(open(info_file, 'r'))
+    # fields to compare with each method and their weights
+    fields_to_compare_with_embeddings = {'job_title': 1, 'job_description': 2, 'requirements': 2, 'benefits': 0.5}
+    fields_to_compare_with_list_comp = {'required_skills': 2, 'nice_to_have_skills': 1}
 
-    fields_to_compare = embeddings_info['fields_to_compare']
-    fields_weights = embeddings_info['fields_weights']
-    input_files = [Path(f) for f in embeddings_info['input_files']]
-    model = SentenceTransformer(embeddings_info['model'])
+    comparator = OffersComparator(parsed_args.input_dir, fields_to_compare_with_embeddings, fields_to_compare_with_list_comp)
+                                  
+    # similarities, partial_similarities = comparator.calc_similarity(to_offer=parsed_args.to_offer)
 
+    # concatenated_embeddings = comparator.calc_concatenated_embeddings()
 
+    # output_dir = Path(parsed_args.output_dir)
+    # output_dir.mkdir(parents=True, exist_ok=True)
 
-    partial_similarities = np.zeros((len(fields_to_compare), len(input_files), len(input_files)))
-    similarities = np.zeros((len(input_files), len(input_files)))
+    # comparator.plot_similarity(similarities, output_dir / 'final_similarity_matrix.png', to_offer=parsed_args.to_offer)
+    # comparator.plot_similarity(partial_similarities[-2], output_dir / 'required_skills_similarity_matrix.png', to_offer=parsed_args.to_offer)
+    # comparator.plot_pca(comparator.embeddings[:, 1], output_dir / 'job_description_pca_plot.png')
+    # comparator.plot_pca(concatenated_embeddings, output_dir / 'concatenated_pca_plot.png')
 
-    for field_ind, field in enumerate(fields_to_compare):
-        partial_similarities[field_ind] = model.similarity(embeddings[:, field_ind], embeddings[:, field_ind])
+    most_similar = comparator.get_most_similar(to_offer=parsed_args.to_offer)
 
-    for field_ind, field in enumerate(fields_to_compare):
-        similarities += fields_weights[field] * partial_similarities[field_ind]
+    
+    
 
-    similarities /= sum(fields_weights.values())
-
-
-    concatenated_embeddings = embeddings.reshape((len(input_files), -1))
-
-    output_dir = Path(parsed_args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    plot_similarity(similarities, input_files, output_dir / 'final_similarity_matrix.png')
-    plot_pca(embeddings[:, fields_to_compare.index('job_description')], input_files, output_dir / 'job_description_pca_plot.png')
-    plot_pca(concatenated_embeddings, input_files, output_dir / 'concatenated_pca_plot.png')
+if __name__ == '__main__':
+    main()
+    
 
 
 

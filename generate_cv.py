@@ -1,4 +1,3 @@
-import ollama
 import pathlib
 import argparse
 import json
@@ -6,7 +5,7 @@ import datetime
 from collections import defaultdict
 from pathlib import Path
 
-from utils import calculate_file_hash
+from utils import calculate_file_hash, execute_prompt
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Summarize the job offer')
@@ -17,35 +16,8 @@ def parse_args():
     parser.add_argument('-model', required=False, type=str, default='qwen2.5:0.5b', help='Model to use for summarization')
     parser.add_argument('-verbosity', required=False, type=int, default=False, help='Verbose mode: 0 - silent, 1 - print system messages, 2 - print system messages and model outputs')
     return parser.parse_args()
-    
 
-def execute_prompt(prompt, model, verbosity=0):
-    stream = ollama.generate(
-        model=model,
-        prompt=prompt,
-        format="json",
-        stream=True,
-    )
 
-    info = {}
-    response = ""
-    for chunk in stream:
-        response += chunk['response']
-        if verbosity > 1:
-            print(chunk['response'], end='', flush=True)
-        
-        if chunk['done']:
-            info['total_duration'] = chunk['total_duration']
-            info['load_duration'] = chunk['load_duration']
-            info['prompt_eval_count'] = chunk['prompt_eval_count']
-            info['prompt_eval_duration'] = chunk['prompt_eval_duration']
-            info['eval_count'] = chunk['eval_count']
-            info['eval_duration'] = chunk['eval_duration']
-
-    return {
-            "response": response, 
-            "info": info ,
-            }
 
 def generate_single_section(prompt, offer, profile, model, offer_placeholder="${OFFER}", profile_placeholder="${PROFILE}", verbosity=0):
 
@@ -61,9 +33,6 @@ def generate_section_in_context(prompt, offer, profile, cv_draft, model, offer_p
     
         return execute_prompt(prompt, model, verbosity)
 
-
-
-    
 
 def handle_generation(prompt_path, offer_id, offer_path, profile_path, output_path, model, offer_placeholder="${OFFER}", profile_placeholder="${PROFILE}", draft_placeholder="${DRAFT}", verbosity=0):
     prompts = json.loads(open(prompt_path, 'r').read())

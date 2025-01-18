@@ -9,51 +9,58 @@
         "industry": "Fintech",
         "posting_date": "N/A",
         "application_deadline": "N/A",
-        "job_description": "We are looking for FullStack Engineers with JS, TS and Node.js who believe that you work better with people you can see face to face. Joining the team is a unique opportunity to work with modern financial systems with large scale, high availability and resilience.",
+        "job_description": "We are on the road to growing our hub in Warsaw, so we are looking for FullStack Engineers with JS, TS and Node.js who believe that you work better with people you can see face to face. Joining the team is a unique opportunity to work with modern financial systems with large scale, high availability and resilience.",
         "requirements": [
             "At least 4+ years of experience.",
             "Javascript/Typescript solid experience.",
             "Framework Knowledge: React.js (front-end) or Node.js (back-end), Redux (state management), Context API, Hook.",
-            "CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel."
+            "CI/CD Experience. Experience with npm or yarn. Familiarity with Webpack and Babel.",
+            "Experience with NoSQL databases (MongoDB, Firebase), SQL.",
+            "Handling databases in backend systems using Node.js.",
+            "Familiarity with serverless architecture (e.g., AWS). Experience with AWS services and cloud infrastructure in projects.",
+            "System Design Focus, especially for senior engineers, assess their ability to design scalable, maintainable systems through architecture discussions.",
+            "Adaptability to different team dynamics.",
+            "English at min. B2 level.",
+            "Previous experience in startups, scale-ups, fintech, payment-related, streaming modern tech companies."
         ],
-        "requierd_skills": [
+        "required_skills": [
             "Javascript",
             "Typescript",
             "React.js",
             "Node.js",
             "Redux",
-            "Context API",
-            "Hook"
+            "NoSQL",
+            "MongoDB",
+            "Firebase",
+            "SQL",
+            "AWS"
         ],
         "nice_to_have_skills": [
-            "NoSQL databases (MongoDB, Firebase)",
-            "SQL",
-            "Serverless architecture (e.g., AWS)",
-            "AWS services and cloud infrastructure in projects",
-            "System Design Focus"
+            "N/A"
         ],
         "benefits": [
-            "Challenging international projects in a Scandinavian business culture.",
-            "Long-term cooperation.",
-            "Transparently built relations based on trust and fair play.",
-            "Flexible working hours.",
-            "Co-financed benefits: Medicover card, Multisport card."
+            "sharing the costs of sports activities",
+            "private medical care",
+            "sharing the costs of foreign language classes",
+            "life insurance",
+            "fruits",
+            "integration events"
         ]
     },
     "info": {
-        "total_duration": 23737085100,
-        "load_duration": 28174900,
-        "prompt_eval_count": 1180,
-        "prompt_eval_duration": 698677000,
-        "eval_count": 406,
-        "eval_duration": 23011505000
+        "total_duration": 49702101000,
+        "load_duration": 31921200,
+        "prompt_eval_count": 1200,
+        "prompt_eval_duration": 2118195000,
+        "eval_count": 449,
+        "eval_duration": 47549193000
     },
     "model": "llama3.2",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "172fac376009ca2997ba5ca16a715a9423a90e14e1ab6ac57000c1e524c68044",
     "offer_id": "3",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\03.json",
     "offer_hash": "7f5c6cb5711a9095af2986bf587a2a4c8749c1d6953e84e1c5b53b4ac3422889",
-    "timestamp": "2024-11-20 00:36:25.887062",
+    "timestamp": "2025-01-09 18:30:36.680060",
     "LLM_engine": "ollama"
 }

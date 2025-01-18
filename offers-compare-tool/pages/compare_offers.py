@@ -71,7 +71,7 @@ def display_page():
             
 
     else:
-        st.write("Not enaught job offers to compare.")
+        st.write("Not enough job offers to compare.")
 
 if __name__ == "__main__":
     display_page()

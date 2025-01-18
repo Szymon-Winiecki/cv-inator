@@ -15,21 +15,13 @@
             "5+ years of leading technology teams",
             "Proven track record of building technology development teams a must"
         ],
-        "requierd_skills": [
+        "required_skills": [
             "JavaScript",
             "SAP Hybris",
-            "Cloud technologies (AWS)",
-            "DevOps practices",
-            "Java script frontend technologies",
-            "Commerce tools",
-            "TOGAF, Agile, Scrum, DevOps, ITIL with extensive experience planning and managing complex technology projects"
+            "AWS",
+            "DevOps practices"
         ],
-        "nice_to_have_skills": [
-            "Experience across multiple time zones",
-            "A broad understanding of IT principles, frameworks and methodologies",
-            "Proficient in front-end development technologies",
-            "A passion for innovation, technology, and digital transformation"
-        ],
+        "nice_to_have_skills": [],
         "benefits": [
             "sharing the costs of sports activities",
             "private medical care",
@@ -46,19 +38,19 @@
         ]
     },
     "info": {
-        "total_duration": 38544232200,
-        "load_duration": 3703982100,
-        "prompt_eval_count": 1200,
-        "prompt_eval_duration": 875424000,
-        "eval_count": 413,
-        "eval_duration": 33953886000
+        "total_duration": 17855112600,
+        "load_duration": 1662504500,
+        "prompt_eval_count": 1220,
+        "prompt_eval_duration": 949429000,
+        "eval_count": 324,
+        "eval_duration": 15239786000
     },
     "model": "llama3.2",
-    "prompt_path": "prompt.txt",
-    "prompt_hash": "6eeb9740f85b7e7c9b31194846f9b39835b4e4786d96c6f1293d594d653b0ace",
+    "prompt_path": "prompts\\summarization\\prompt.txt",
+    "prompt_hash": "172fac376009ca2997ba5ca16a715a9423a90e14e1ab6ac57000c1e524c68044",
     "offer_id": "1",
     "offer_path": "D:\\SzymonW\\nauka\\programowanie\\AI\\cv-inator\\offers\\json\\00.json",
     "offer_hash": "54e83ff97e69d97d61668f972203395ab2712cdc928c8e4e0798871affa59fb0",
-    "timestamp": "2024-11-20 00:35:16.614381",
+    "timestamp": "2025-01-09 18:29:02.228773",
     "LLM_engine": "ollama"
 }
