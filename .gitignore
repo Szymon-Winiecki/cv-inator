@@ -5,3 +5,4 @@ local/
 *.egg-info/
 
 example-app/data
+example-app/output
