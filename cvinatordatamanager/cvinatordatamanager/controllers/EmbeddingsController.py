@@ -90,7 +90,7 @@ class EmbeddingsController:
             elif features[feature] == 'raw' and feature in summary:
                 features_dict[feature] = summary[feature]
             else:
-                raise ValueError(f"Feature {feature} not found in the embedding or the summary")
+                return None
         
         return features_dict
         

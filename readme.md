@@ -40,26 +40,6 @@ pip install -e cvinatorprocessingtools
 2. Go to one of the supported job boards, select the offer, click 's'
 3. Scrapped offer is now in your clipboard
 
-
-### summarizing offers
-
-```
-python summarize.py [-h] -prompt_path PROMPT_PATH -offer_path OFFER_PATH -output_path OUTPUT_PATH [-model MODEL]
-```
-
-### comparing offers
-
-to calculate embeddings:
-
-```
-python embed.py [-h] -input_dir INPUT_DIR -output_dir OUTPUT_DIR -output_filename OUTPUT_FILENAME
-```
-
-to compare offers using calculated embedings:
-```
-compare.py [-h] -input_path INPUT_PATH -output_dir OUTPUT_DIR
-```
-
 ### cv generation
 
 ```

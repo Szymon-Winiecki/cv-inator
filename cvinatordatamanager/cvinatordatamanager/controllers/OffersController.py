@@ -37,6 +37,18 @@ class OffersController:
         return offer
     
     @staticmethod
+    def get_offer_by_embeding_id(conn, data_dir, embedding_id):
+        cur = conn.cursor()
+        cur.execute('''SELECT summaries.offer_id FROM embeddings JOIN summaries ON embeddings.summary_id = summaries.id WHERE embeddings.id=?''', (embedding_id,))
+        row = cur.fetchone()
+
+        if row is None:
+            return None
+        
+        offer_id = row[0]
+        return OffersController.get_offer_by_id(conn, data_dir, offer_id)
+    
+    @staticmethod
     def insert_offer(conn, data_dir, offer):
 
         offer_tuple = (offer['source'], offer['timestamp'])

@@ -93,6 +93,9 @@ class DataServer:
     def get_offer_by_id(self, offer_id):
         return OffersController.get_offer_by_id(self.conn, self.data_dir, offer_id)
     
+    def get_offer_by_embedding_id(self, embedding_id):
+        return OffersController.get_offer_by_embeding_id(self.conn, self.data_dir, embedding_id)
+    
     ###
     # Insert offer
     #
@@ -127,6 +130,9 @@ class DataServer:
     
     def get_newest_summary_by_offer_id(self, offer_id):
         return SummariesController.get_newest_summary_by_offer_id(self.conn, self.data_dir, offer_id)
+    
+    def get_summary_by_embedding_id(self, embedding_id):
+        return SummariesController.get_summary_by_embedding_id(self.conn, self.data_dir, embedding_id)
     
 
     ###

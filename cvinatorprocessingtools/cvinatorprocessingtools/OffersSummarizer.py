@@ -22,8 +22,12 @@ class OffersSummarizer:
 
         llm_output = execute_prompt(filled_prompt, model, LLM_engine)
 
-        # LLM outputs JSON as a string, so we need to parse it
-        summary = json.loads(llm_output["response"])
+        try:
+            # LLM outputs JSON as a string, so we need to parse it
+            summary = json.loads(llm_output["response"])
+        except:
+            # json parsing failed
+            return None
 
         result = {
             'offer_summary': summary,

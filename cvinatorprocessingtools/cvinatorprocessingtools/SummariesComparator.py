@@ -6,11 +6,14 @@ from cvinatordatamanager.DataServer import DataServer
 
 class SummariesComparator:
 
+    ###
+    # data_server : DataServer - data server to get offers features
+    #
     # comparation_sheme : dict of structure:
     # {
     #     "field_1": {
-    #         "weight": <weight : float>,
-    #         "method": <"embedding" | "list">
+    #         "weight": <weight : float>, // importance of the field in the final similarity
+    #         "method": <"embedding" | "list"> // method of comparison: "embedding" - compare embeddings with SBERT built-in simmilarity measure, "list" - compare lists of strings by the number of common elements
     #     },
     #     "field_2": { ... },
     #     ...
@@ -19,7 +22,15 @@ class SummariesComparator:
         self.data_server = data_server
         self.comparation_sheme = comparation_sheme
     
-    #  returns dict of structure:
+    ###
+    # calculates similarities between target offer and other offers and returns the most similar offers in descending similarities order
+    #   
+    # target_embedding_id : int - id of the target offer
+    # embeddings_ids : list - list of ids of offers to compare
+    # top_n : int | None - number of most similar offers to return, if None returns all
+    # similarity_threshold : float | None - minimum similarity to return offer, if None then similarity values are not filtered
+    #
+    # returns dict of structure:
     # {
     #     <1st_most_simmilar_embedding_id> : <similarity>,
     #     <2nd_most_simmilar_embedding_id> : <similarity>,
@@ -29,7 +40,20 @@ class SummariesComparator:
         features_query =  self.__get_features_query()
 
         target_features = self.data_server.get_offer_features(target_embedding_id, features_query)
+        if target_features == None:
+            print("wARING! No features for the target offer. Can't calculate similarities.")
+            return {}
+
         other_features = [ self.data_server.get_offer_features(embedding_id, features_query) for embedding_id in embeddings_ids ]
+
+        i = 0
+        while i < len(other_features):
+            if other_features[i] == None:
+                print(f"WARNING! No features for the offer with id {embeddings_ids[i]}. Skipping this offer")
+                other_features.pop(i)
+                embeddings_ids.pop(i)
+            else:
+                i += 1
 
         similarities, _ = self.__calc_similarity([target_features], other_features)
 
@@ -46,8 +70,14 @@ class SummariesComparator:
         return { embeddings_ids[i] : similarities[0, i] for i in most_similar_ord[0] }
 
 
-
-    def get_similarities(self, embeddings_ids : list) -> dict:
+    ###
+    # calculates similarities between every pair of offers in the list
+    #
+    # embeddings_ids : list - list of ids of embeddings to compare (embedding accumulates information about the offer, summary, used models, etc.)
+    #
+    # returns similarities : np.ndarray - matrix of similarities between offers accumulated from partial similarities with weights from comparation_sheme
+    # AND partial_similarities : np.ndarray - matrix of similarities between offers for each separate field (calculated by the method specified in comparation_sheme)
+    def get_similarities(self, embeddings_ids : list) -> tuple:
         features_query =  self.__get_features_query()
             
         features = [ self.data_server.get_offer_features(embedding_id, features_query) for embedding_id in embeddings_ids ]
@@ -85,7 +115,7 @@ class SummariesComparator:
     def __calc_similarity(self, to_offers_features : dict, of_offers_features : dict) -> np.ndarray:
 
         if len(to_offers_features) == 0 or len(of_offers_features) == 0:
-            return np.zeros((0, 0))
+            return np.zeros((0, 0)), np.zeros((0, 0, 0))
         
         num_fields = len(self.comparation_sheme)
         num_to = len(to_offers_features)

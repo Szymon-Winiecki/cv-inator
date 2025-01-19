@@ -66,6 +66,18 @@ class SummariesController:
         return summary
     
     @staticmethod
+    def get_summary_by_embedding_id(conn, data_dir, embedding_id):
+        cur = conn.cursor()
+        cur.execute('''SELECT summaries.id FROM embeddings JOIN summaries ON embeddings.summary_id = summaries.id WHERE embeddings.id=?''', (embedding_id,))
+        row = cur.fetchone()
+
+        if row is None:
+            return None
+        
+        summary_id = row[0]
+        return SummariesController.get_summary_by_id(conn, data_dir, summary_id)
+    
+    @staticmethod
     def insert_summary(conn, data_dir, summary):
 
         prompt_id = PromptsController.insert_or_get_id(conn, summary['prompt'])
