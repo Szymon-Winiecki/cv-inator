@@ -34,7 +34,8 @@ def get_offers_urls(n_offers):
     page_number = 1
     
     while len(urls) < n_offers:
-        driver.get(f"{main_url}?page={page_number}")
+    #   driver.get(f"{main_url}?page={page_number}")
+        driver.get(f"{main_url}?pageNumber={page_number}")
         time.sleep(2)  # Wait for the page to load
         
         # Parse the page content with BeautifulSoup
@@ -127,6 +128,7 @@ def main():
         full_url = f"https://theprotocol.it{relative_url}"
         print(f"Extracting data from {full_url}")
         job_data = extract_job_data(full_url)
+        time.sleep(1)  # Be polite to the server
         job_data_list.append(job_data)
     
     # Save the data to a JSON file
