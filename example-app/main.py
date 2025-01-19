@@ -9,21 +9,28 @@ from  cvinatorprocessingtools.SummariesEmbedder import SummariesEmbedder
 from  cvinatorprocessingtools.SummariesComparator import SummariesComparator
 from  cvinatorprocessingtools.SimilarityVisualizer import SimilarityVisualizer
 
+def insert_jji_offers(data_server, json_path, top_n=10):
+    with open(json_path, "r", encoding="utf8") as file:
+        offers = json.load(file)
+
+    for offer in offers[:top_n]:
+        processed_offer = {
+            'offer': offer,
+            'source': 'https://justjoin.it/',
+            'timestamp': int(datetime.now().timestamp()),
+        }
+        data_server.insert_offer(processed_offer)
+
 def main():
     data_server = DataServer('example-app/data', create_if_not_exists=True, recreate_if_outdated=True)
+
+    data_server.reset_database()
     
-    offer_paths = ['offers/json/00.json', 'offers/json/01.json', 'offers/json/03.json', 'offers/json/04.json', 'offers/json/05.json']
-
-    for offer_path in offer_paths:
-        with open(offer_path, "r", encoding="utf8") as file:
-            offer = json.load(file)
-
-        data_server.insert_offer(offer)
+    insert_jji_offers(data_server, 'job_offers.json', top_n=100)
 
     offers_ids = data_server.get_offers_ids()
 
-    prompt_path = "prompts/summarization/prompt.txt"
-
+    prompt_path = "prompts/summarization/prompt_jji.txt"
     with open(prompt_path, "r") as file:
         prompt = file.read()
 
@@ -33,7 +40,7 @@ def main():
         summary = offers_summarizer.summarize_offer(id, prompt, 'llama3.2', 'ollama')
         data_server.insert_summary(summary)
 
-    fields_to_embed = ['job_title', 'job_description', 'requirements', 'benefits']
+    fields_to_embed = ['job_title', 'job_description', 'requirements']
     summaries_embedder = SummariesEmbedder(data_server, 'paraphrase-albert-small-v2', fields_to_embed)
     summaries_ids = data_server.get_summaries_ids()
 
@@ -54,17 +61,9 @@ def main():
             'method': 'embedding',
             'weight': 1.0
         },
-        'benefits': {
-            'method': 'embedding',
-            'weight': 0.5
-        },
         'required_skills': {
             'method': 'list',
             'weight': 2.0
-        },
-        'nice_to_have_skills': {
-            'method': 'list',
-            'weight': 1.0
         }
     }
     

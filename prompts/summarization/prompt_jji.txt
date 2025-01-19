@@ -1,0 +1,30 @@
+Please summarize the following job offer in English and structure the output as a JSON object with the following fields:
+
+    job_title: The title of the job.
+    company_name: The name of the company offering the position.
+    location: The location of the job (e.g., city or 'Remote' if applicable).
+    salary_range: The salary range if provided (use 'N/A' if not available).
+    employment_type: The type of employment (e.g., Full-time, Contract, etc.).
+    experience_level: The level of experience required for the job (e.g., Junior, Mid-level, Senior).
+    industry: The industry in which the company operates (e.g., Information Technology, Finance).
+    job_description: A short, concise description of the job and main responsibilities (2-3 sentences).
+    requirements: A bullet-point list of qualifications, skills, and experience required for the role.
+    required_skills: A bullet-point list of specific skills required for the role. Use only short names of technologies or methods. No sentences.
+
+Ensure the response is formatted as valid JSON. If any information is missing in the job offer, use 'N/A' for the respective field.
+
+Use no more than 250 words for every field.
+
+Be concise and precise.
+
+Limit the response to a total of 1000 words or less.
+
+Put only JSON in response.
+
+Ensure all fields are fully filled with content from the job offer, without placeholders or square brackets [].
+
+Input: 
+
+${OFFER}
+
+Output (example format): { "job_title": "[Job Title]", "company_name": "[Company Name]", "location": "[Location]", "salary_range": "[Salary Range]", "employment_type": "[Employment Type]", "experience_level": "[Experience Level]", "industry": "[Industry]", "job_description": "[Short job description]", "requirements": [ "[Requirement 1]", "[Requirement 2]" ], "required_skills": [ "[Skill 1]", "[Skill 2]" ] }
