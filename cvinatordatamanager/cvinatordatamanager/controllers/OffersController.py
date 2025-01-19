@@ -1,8 +1,6 @@
 from  ..utils.fs import calculate_file_hash, save_json, load_json
 from pathlib import Path
 
-from .SummariesController import SummariesController
-
 class OffersController:
     OFFERS_DIR = Path('offers')
 
@@ -69,6 +67,7 @@ class OffersController:
         if full_path.exists():
             full_path.unlink()
 
+        from .SummariesController import SummariesController
         SummariesController.delete_summaries_by_offer_id(conn, data_dir, offer_id)
     
 

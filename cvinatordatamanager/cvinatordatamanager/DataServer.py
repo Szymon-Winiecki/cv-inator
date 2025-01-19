@@ -153,23 +153,23 @@ class DataServer:
     # Embeddings
     ###
 
-    def get_embeddings(self):
-        return EmbeddingsController.get_embeddings(self.conn)
+    def get_embeddings_ids(self):
+        return EmbeddingsController.get_embeddings_ids(self.conn)
     
     def get_embedding_by_id(self, embedding_id):
-        return EmbeddingsController.get_embedding_by_id(self.conn, embedding_id)
+        return EmbeddingsController.get_embedding_by_id(self.conn, self.data_dir, embedding_id)
     
-    def get_embeddings_by_summary_id(self, summary_id):
-        return EmbeddingsController.get_embeddings_by_summary_id(self.conn, summary_id)
+    def get_embeddings_ids_by_summary_id(self, summary_id):
+        return EmbeddingsController.get_embeddings_ids_by_summary_id(self.conn, summary_id)
     
-    def get_newest_embedding_by_summary_id(self, summary_id):
-        return EmbeddingsController.get_newest_embedding_by_summary_id(self.conn, summary_id)
+    def get_newest_embedding_id_by_summary_id(self, summary_id):
+        return EmbeddingsController.get_newest_embedding_id_by_summary_id(self.conn, summary_id)
     
-    def get_embeddings_by_offer_id(self, offer_id):
-        return EmbeddingsController.get_embeddings_by_offer_id(self.conn, offer_id)
+    def get_embeddings_ids_by_offer_id(self, offer_id):
+        return EmbeddingsController.get_embeddings_ids_by_offer_id(self.conn, offer_id)
     
-    def get_newest_embedding_by_offer_id(self, offer_id):
-        return EmbeddingsController.get_newest_embedding_by_offer_id(self.conn, offer_id)
+    def get_newest_embedding_id_by_offer_id(self, offer_id):
+        return EmbeddingsController.get_newest_embedding_id_by_offer_id(self.conn, offer_id)
     
     ###
     # Insert Embedding
@@ -190,3 +190,17 @@ class DataServer:
     
     def delete_embedding(self, embedding_id):
         return EmbeddingsController.delete_embedding(self.conn, self.data_dir, embedding_id)
+    
+
+    ###
+    # Offer features - embeddings, lists etc from summaries for comparison
+    ###
+
+    # features: dict of structure:
+    # {
+    #     <feature_1>: <"embedding" | "raw">,
+    #     <feature_2>: <"embedding" | "raw">,
+    #     ...
+    # }
+    def get_offer_features(self, embedding_id, features):
+        return EmbeddingsController.get_features_by_embedding_id(self.conn, self.data_dir, embedding_id, features)

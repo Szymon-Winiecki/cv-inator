@@ -1,7 +1,6 @@
 from  ..utils.fs import calculate_file_hash, save_json, load_json
 from pathlib import Path
 
-from .EmbeddingsController import EmbeddingsController
 from .PromptsController import PromptsController
 
 class SummariesController:
@@ -102,6 +101,7 @@ class SummariesController:
         if full_path.exists():
             full_path.unlink()
 
+        from .EmbeddingsController import EmbeddingsController
         EmbeddingsController.delete_embeddings_by_summary_id(conn, data_dir, summary_id)
         
 

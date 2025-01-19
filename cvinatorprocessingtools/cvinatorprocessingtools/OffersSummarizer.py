@@ -4,6 +4,7 @@ from datetime import datetime
 from cvinatordatamanager.DataServer import DataServer
 
 from .utils.llm_helpers import execute_prompt
+from .utils.helpers import get_current_timestamp
 
 class OffersSummarizer:
     def __init__(self, data_server: DataServer, offer_placeholder='${OFFER}') -> None:
@@ -30,7 +31,7 @@ class OffersSummarizer:
             'model': model,
             'prompt': prompt,
             'offer_id': offer_id,
-            'timestamp' : int(datetime.now().timestamp()),
+            'timestamp' : get_current_timestamp(),
             'LLM_engine': LLM_engine,
         }
 
