@@ -57,7 +57,7 @@ def load_jji_data(data_server):
 def similarities_usage_example():
 
     # create data server to access offers and precessed data
-    data_server = DataServer('data')
+    data_server = DataServer('data', create_if_not_exists=False)
 
     # define how comparation should be done
     # specify which features of the offer (summary in fact) should be compared and how
