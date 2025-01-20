@@ -34,7 +34,8 @@ def display_page():
             choosed_offer = st.selectbox("Choose offer", offers, key='offer_key')
     else:
         choosed_offer = st.query_params["offer"].split('.')[0]
-        st.selectbox("Offer", offers, index=offers.index(choosed_offer))
+        if template_for_offers:
+            st.selectbox("Offer", offers, index=offers.index(choosed_offer))
 
     if st.button("Generate CV"):
         if template_for_offers:
@@ -42,7 +43,7 @@ def display_page():
             cv_path = load_cv_path(username)
             output_path = load_output_path_cv_generated(username, choosed_offer)
             prompt_path = load_prompt_cv_path()
-            #subprocess.run(["python","generate_cv_for_job.py",'-prompt_path', prompt_path, '-offer_path', offer_path, '-profile_path', cv_path, '-output_path', output_path, '-verbosity',str(0)])
+            subprocess.run(["python","generate_cv_for_job.py",'-prompt_path', prompt_path, '-offer_path', offer_path, '-profile_path', cv_path, '-output_path', output_path, '-verbosity',str(0)])
             generated_cv = generate_cv(Path(template_path), username, choosed_offer,  Path(cv_output_path))
         else:
             generated_cv = generate_cv(Path(template_path), username, 0,  Path(cv_output_path))

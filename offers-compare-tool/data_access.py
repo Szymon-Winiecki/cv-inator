@@ -36,7 +36,7 @@ def load_offer(offer_path):
         return json.load(file)
 
 def load_usernames():
-    return [path.stem for path in COMPARISON_RECORDS_DIR.glob("*.json")]
+    return [path.stem for path in CV_DATA_DIR.glob("*.json")]
 
 def load_templates():
     return [path.stem for path in HTML_TEMPLATES_DIR.glob("*.html")]
@@ -150,3 +150,21 @@ def load_prompt_cv_path():
 
 def load_output_path_cv_generated(username, offer_id):
     return PROJECT_ROOT_DIR / "users_cv_data_generated" / f"{username}_{offer_id}.json"
+
+def create_user(username):
+    path = CV_DATA_DIR / f"{username}.json"
+    data = {    
+        "profile": {
+        "personal_info": {},
+        "tech_stack": [],
+        "soft_stack": [],
+        "education": [],
+        "work_experience": [],
+        "projects": [],
+        "certifications": [],
+        "languages": [],
+        "about_me": ""
+            }
+    }
+    with open(path, "w") as file:
+        json.dump(data, file, indent=4)
