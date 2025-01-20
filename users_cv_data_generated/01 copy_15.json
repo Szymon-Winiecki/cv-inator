@@ -1,0 +1,135 @@
+{
+    "cv": {
+        "personal_info": {
+            "name": "John Doe",
+            "title": "Fullstack Developer",
+            "location": "Warsaw, Poland",
+            "email": "john.doe@mail.com",
+            "phone": "+48 123 456 789",
+            "linkedin": "https://www.linkedin.com/in/johndoe/",
+            "github": "https://github.com/johndoe"
+        },
+        "education": [
+            {
+                "institution": "University of Warsaw",
+                "degree": "Bachelor's degree in Computer Science",
+                "field_of_study": "Computer Science",
+                "specialization": "Software Engineering",
+                "start_date": "2015-01-01",
+                "end_date": "2019-01-01"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "Certification A",
+                "authority": "Certification Authority",
+                "date": "2022-01-01",
+                "description": "Certification description."
+            }
+        ],
+        "languages": [
+            {
+                "language": "English",
+                "proficiency": "Fluent"
+            },
+            {
+                "language": "Polish",
+                "proficiency": "Native"
+            }
+        ],
+        "tech_stack": [
+            "SAP",
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "Node.js",
+            "CI/CD",
+            "npm",
+            "yarn",
+            "Webpack",
+            "Babel"
+        ],
+        "soft_stack": [
+            "problem-solving",
+            "communication",
+            "agile",
+            "scrum"
+        ],
+        "work_experience": [
+            {
+                "company": "Decora S.A.",
+                "position": "Expert",
+                "start_date": "2021-01-01",
+                "end_date": "2021-01-01",
+                "description": "Worked on a large scale financial system with high availability and resilience."
+            },
+            {
+                "company": "Company A",
+                "position": "Fullstack Developer",
+                "start_date": "2020-01-01",
+                "end_date": "2021-01-01",
+                "description": "Worked on a large scale financial system with high availability and resilience."
+            }
+        ],
+        "projects": [
+            {
+                "name": "SmartGardener",
+                "description": "A fullstack web application for managing your plants. Implemented with React.js and Node.js. Features include plant database, watering reminders, and plant care tips. Deployed on Heroku. Offers rich UI/UX experience.",
+                "tech_stack": [
+                    "React.js",
+                    "Node.js"
+                ],
+                "github": "https://github.com/johndoe/project-a",
+                "demo": "https://www.example.com/project-a"
+            },
+            {
+                "name": "CI/CD Pipeline",
+                "description": "Implemented complete CI/CD pipeline for a web application.",
+                "tech_stack": [
+                    "CI/CD",
+                    "npm",
+                    "yarn",
+                    "Webpack",
+                    "Babel"
+                ],
+                "github": "https://github.com/johndoe/project-b",
+                "demo": "https://www.example.com/project-b"
+            },
+            {
+                "name": "HomeFinApp",
+                "description": "A web application for managing personal finances. Features include budget tracking, expense categorization, financial reports, analyzing receipts, and setting financial goals. WIP. For now functional backend, work extensively on beautiful frontend.",
+                "tech_stack": [
+                    "Node.js",
+                    "React.js",
+                    "Tailwind CSS",
+                    "MongoDB",
+                    "Express.js"
+                ],
+                "github": "https://www.example.com/project-b",
+                "demo": "https://www.example.com/project-b"
+            }
+        ],
+        "about_me": "John Doe is a experienced Fullstack Developer with a background in Computer Science. He has been certified through Certification A and strong problem-solving skills."
+    },
+    "supplement": {
+        "review": "{\n  \"improvement_suggestions\": [\n    {\n      \"suggestion_name\": \"Add relevant experience\",\n      \"description\": \"Add recent work experience that directly relates to the job description. For example, a candidate who has worked on [insert relevant skills or projects].\"\n    },\n    {\n      \"suggestion_name\": \"Clarify key qualifications\",\n      \"description\": \"Make sure the job description clearly describes the necessary qualifications for the position. Use specific phrases like 'with strong [insert qualification]' or 'must have...' to make it more concrete.\"\n    },\n    {\n      \"suggestion_name\": \"Update educational background\",\n      \"description\": \"Include details about your education and how it aligns with the job description. For example, mention that you have a degree in [insert field] from [insert institution].\"\n    }\n  ]\n}"
+    },
+    "info": {
+        "total_duration": 3535742000,
+        "load_duration": 19964200,
+        "prompt_eval_count": 120,
+        "prompt_eval_duration": 6000000,
+        "eval_count": 175,
+        "eval_duration": 3507000000
+    },
+    "model": "qwen2.5:0.5b",
+    "prompt_path": "C:\\magisterka\\UG\\cv-inator\\prompts\\cv_generation\\prompt_pack_01.json",
+    "prompt_hash": "b5499c8c284a0e76d0778fab139f1d33c6293b1b150e3e63a62d5822c18f1851",
+    "offer_id": 999999999999,
+    "offer_path": "C:\\magisterka\\UG\\cv-inator\\data\\offers\\15.json",
+    "offer_hash": "ced330dc72671f354f93cfc0bef3f8b445c4ebfb5b526f15a7981987a64f3f47",
+    "profile_path": "C:\\magisterka\\UG\\cv-inator\\users_cv_data\\01 copy.json",
+    "profile_hash": "c2c03de2461143e1c3b341b095f2a48c951810db5f3ec4e4325d2b0478d371e8",
+    "timestamp": "2025-01-20 15:27:07.773783",
+    "LLM_engine": "ollama"
+}

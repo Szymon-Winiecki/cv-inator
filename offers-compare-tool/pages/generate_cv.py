@@ -22,8 +22,6 @@ def display_page():
     
     template_path = load_template_path(chosen_template)
 
-    cv_output_path = get_output_path(username, chosen_template)
-
     offers = load_offers()
 
     template_for_offers = st.checkbox("Make CV for offer", value=is_offer)
@@ -37,6 +35,7 @@ def display_page():
         if template_for_offers:
             st.selectbox("Offer", offers, index=offers.index(choosed_offer))
 
+    cv_output_path = get_output_path(username, chosen_template, choosed_offer)
     if st.button("Generate CV"):
         if template_for_offers:
             offer_path = load_offer_path(choosed_offer)
@@ -48,7 +47,7 @@ def display_page():
         else:
             generated_cv = generate_cv(Path(template_path), username, 0,  Path(cv_output_path))
         st.success("CV generated successfully")
-        st.download_button(label="Download HTML File",data=generated_cv,file_name="file.html",mime="text/html")
+        st.download_button(label="Download CV",data=generated_cv,file_name="{}_{}_{}.html".format(username, chosen_template, choosed_offer),mime="text/html")
 
 if __name__ == "__main__":
     display_page()

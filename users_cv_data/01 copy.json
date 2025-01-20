@@ -1,5 +1,5 @@
 {
-    "profile":{
+    "profile": {
         "personal_info": {
             "name": "John Doe",
             "title": "Fullstack Developer",
@@ -91,12 +91,12 @@
             }
         ],
         "certifications": [
-        {
-            "name": "Certification A",
-            "authority": "Certification Authority",
-            "date": "2022-01-01",
-            "description": "Certification description."
-        }  
+            {
+                "name": "Certification A",
+                "authority": "Certification Authority",
+                "date": "2022-01-01",
+                "description": "Certification description."
+            }
         ],
         "languages": [
             {

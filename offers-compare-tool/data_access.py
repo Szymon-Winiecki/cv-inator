@@ -12,6 +12,7 @@ COMPARISON_RECORDS_DIR = PROJECT_ROOT_DIR / "human_comparisons" / "offers_simila
 CV_DATA_DIR = PROJECT_ROOT_DIR / "users_cv_data"
 CV_GEN_DIR = PROJECT_ROOT_DIR / "users_cv_data_generated"
 HTML_TEMPLATES_DIR = PROJECT_ROOT_DIR / "cv_visualisation" / "templates"
+GENERATED_CV_DIR = PROJECT_ROOT_DIR / "generated_cv_html"
 
 @st.cache_data
 def load_offers_list():
@@ -130,8 +131,8 @@ def load_cv_data(username, offer_id):
 def load_template_path(template):
     return HTML_TEMPLATES_DIR / f"{template}.html"
 
-def get_output_path(username, template,):
-    return PROJECT_ROOT_DIR / "generated_cv_html" / f"{username}_{template}.html"
+def get_output_path(username, template, offer_id):
+    return PROJECT_ROOT_DIR / "generated_cv_html" / f"{username}_{template}_{offer_id}.html"
 
 def get_data_directory():
     return PROJECT_ROOT_DIR / "data" / "offers"
@@ -168,3 +169,12 @@ def create_user(username):
     }
     with open(path, "w") as file:
         json.dump(data, file, indent=4)
+
+def load_generated_cvs(username):
+    return [path.stem for path in GENERATED_CV_DIR.glob(f"{username}_*.html")]
+
+def load_html_cv(username, template, offer):
+    path = GENERATED_CV_DIR / f"{username}_{template}_{offer}.html"
+    with open(path, "r") as file:
+        return file.read()
+    
