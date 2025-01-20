@@ -2,11 +2,8 @@ import streamlit as st
 import os
 import json
 from cvinatordatamanager.DataServer import DataServer
-
 from  cvinatorprocessingtools.SummariesComparator import SummariesComparator
-
-# Path to the directory containing JSON files
-DATA_DIRECTORY = "../data/offers"
+from data_access import get_data_directory
 
 def load_offers(data_directory):
     offers = []
@@ -108,7 +105,7 @@ def display_page():
     st.title("Job Offers")
 
     # Load offers
-    offers = load_offers(DATA_DIRECTORY)
+    offers = load_offers(get_data_directory())
 
     # State to track filtered offer IDs
     if "filtered_ids" not in st.session_state:
@@ -146,6 +143,9 @@ def display_page():
                 if st.button("Show Similar Offers", key=similar_button_key):
                     st.session_state.filtered_ids = get_similar_offer_ids(offer["id"])
                     st.experimental_rerun()  # Reload the page to show filtered offers
+                st.markdown('<a href="/generate_cv/?offer={}" target="_self">Generate CV for that offer</a>'.format(offer["id"]), unsafe_allow_html=True)
+                    #st.experimental_set_query_params(page = 'Generate CV', offer_id = offer['id'])
+
     else:
         st.write("No offers match your criteria.")
 

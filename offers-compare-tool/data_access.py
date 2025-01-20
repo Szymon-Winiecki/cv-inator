@@ -7,24 +7,23 @@ import os
 PROJECT_ROOT_DIR = Path(__file__).resolve().parents[1]
 
 # Path to the job offers index file
-OFFERS_INDEX_PATH = PROJECT_ROOT_DIR / "offers" / "index.json" 
+OFFERS_INDEX_PATH = PROJECT_ROOT_DIR / "data" / "offers"
 COMPARISON_RECORDS_DIR = PROJECT_ROOT_DIR / "human_comparisons" / "offers_similarity"
 CV_DATA_DIR = PROJECT_ROOT_DIR / "users_cv_data"
-
+CV_GEN_DIR = PROJECT_ROOT_DIR / "users_cv_data_generated"
+HTML_TEMPLATES_DIR = PROJECT_ROOT_DIR / "cv_visualisation" / "templates"
 
 @st.cache_data
 def load_offers_list():
-    path = OFFERS_INDEX_PATH
+    paths =  [path for path in OFFERS_INDEX_PATH.glob("*.json")]
 
-    if not path.exists():
-        return []
-    
-    with open(path, "r") as file:
-        offers_index = json.load(file)
-    
-    offers = list(offers_index.get("offers", {}).items())
 
-    return offers
+    offers_data = [(i, value) for i, value in enumerate(paths)]
+    #with open(path, "w") as file:
+        #offers_index = json.load(file)
+    
+    #offers = list(offers_index.get("offers", {}).items())
+    return offers_data
 
 @st.cache_data
 def load_offer(offer_path):
@@ -38,6 +37,12 @@ def load_offer(offer_path):
 
 def load_usernames():
     return [path.stem for path in COMPARISON_RECORDS_DIR.glob("*.json")]
+
+def load_templates():
+    return [path.stem for path in HTML_TEMPLATES_DIR.glob("*.html")]
+
+def load_offers():
+    return [path.stem for path in OFFERS_INDEX_PATH.glob("*.json")]
 
 def load_comparisons(username):
     path = COMPARISON_RECORDS_DIR / f"{username}.json"
@@ -78,7 +83,7 @@ def save_cv_data(username, data):
     if not path.parent.exists():
         path.parent.mkdir(parents=True)
     with open(path, "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=4)
         return True
     return False
 
@@ -95,9 +100,12 @@ def remove_comparison_record(username, index):
 
     with open(path, "w") as file:
         json.dump(records, file)
-
-def load_cv_data(username):
-    full_path = CV_DATA_DIR / f"{username}.json"
+    
+def load_cv_data(username, offer_id):
+    if offer_id == 0:
+        full_path = CV_DATA_DIR / f"{username}.json"
+    else:
+        full_path = CV_GEN_DIR / f"{username}_{offer_id}.json"
     
     if os.path.exists(full_path):
         with open(full_path, 'r') as f:
@@ -119,5 +127,26 @@ def load_cv_data(username):
     }
     return data
 
+def load_template_path(template):
+    return HTML_TEMPLATES_DIR / f"{template}.html"
 
+def get_output_path(username, template,):
+    return PROJECT_ROOT_DIR / "generated_cv_html" / f"{username}_{template}.html"
 
+def get_data_directory():
+    return PROJECT_ROOT_DIR / "data" / "offers"
+
+def get_database_directory():
+    return PROJECT_ROOT_DIR / "data"
+
+def load_offer_path(offer_id):
+    return PROJECT_ROOT_DIR / "data" / "offers" / f"{offer_id}.json"
+
+def load_cv_path(username):
+    return PROJECT_ROOT_DIR / "users_cv_data" / f"{username}.json"
+
+def load_prompt_cv_path():
+    return PROJECT_ROOT_DIR / "prompts" / "cv_generation" / "prompt_pack_01.json"
+
+def load_output_path_cv_generated(username, offer_id):
+    return PROJECT_ROOT_DIR / "users_cv_data_generated" / f"{username}_{offer_id}.json"

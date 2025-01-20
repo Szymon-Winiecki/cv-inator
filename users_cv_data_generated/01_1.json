@@ -1,0 +1,141 @@
+{
+    "cv": {
+        "personal_info": {
+            "name": "John Doe",
+            "title": "Fullstack Developer",
+            "location": "Warsaw, Poland",
+            "email": "john.doe@mail.com",
+            "phone": "+48 123 456 789",
+            "linkedin": "https://www.linkedin.com/in/johndoe/",
+            "github": "https://github.com/johndoe"
+        },
+        "education": [
+            {
+                "institution": "asdsadasdasd",
+                "degree": "asdasd",
+                "field_of_study": "asdasdasd",
+                "specialization": "asdasd",
+                "start_date": "2000-01-01",
+                "end_date": "2000-01-01"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "Certification A",
+                "authority": "Certification Authority",
+                "date": "2022-01-01",
+                "description": "Certification description."
+            }
+        ],
+        "languages": [
+            {
+                "language": "English",
+                "proficiency": "Fluent"
+            },
+            {
+                "language": "Polish",
+                "proficiency": "Native"
+            }
+        ],
+        "tech_stack": [
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "Node.js",
+            "CI/CD",
+            "npm",
+            "yarn",
+            "Webpack",
+            "Babel"
+        ],
+        "soft_stack": [
+            "Problem-solving",
+            "Communication",
+            "Agile",
+            "Scrum"
+        ],
+        "work_experience": [
+            {
+                "company": "ITDS Polska Sp. z o.o.",
+                "position": "Administrator Oracle BI Publisher",
+                "start_date": "2020-01-01",
+                "end_date": "2021-01-01",
+                "description": "As an Administrator Oracle BI Publisher, you will be working for our client, a Polish leader in the energy sector, supporting the development and maintenance of their Oracle Analytics Publisher system. This project focuses on delivering IT services for operational and analytical reporting, involving tasks such as system analysis, design, programming, and documentation preparation. The project's goal is to enable seamless IT support for two primary instances of the system."
+            },
+            {
+                "company": "Company A",
+                "position": "Fullstack Developer",
+                "start_date": "2020-01-01",
+                "end_date": "2021-01-01",
+                "description": "Worked on a large scale financial system with high availability and resilience. Been responsible for designing and implementing scalable and maintainable architectures."
+            },
+            {
+                "company": "Company B",
+                "position": "Frontend Developer",
+                "start_date": "2018-01-01",
+                "end_date": "2019-01-01",
+                "description": "Developed e-commerce applications using React.js. Implemented responsive and user-friendly interfaces. Worked closely with the design team to create pixel-perfect layouts."
+            }
+        ],
+        "projects": [
+            {
+                "name": "SmartGardener",
+                "description": "A fullstack web application for managing your plants. Implemented with React.js and Node.js. Features include plant database, watering reminders, and plant care tips. Deployed on Heroku. Offers rich UI/UX experience.",
+                "tech_stack": [
+                    "React.js",
+                    "Node.js"
+                ],
+                "github": "https://github.com/johndoe/project-a",
+                "demo": "https://www.example.com/project-a"
+            },
+            {
+                "name": "CI/CD Pipeline",
+                "description": "Implemented complete CI/CD pipeline for a web application.",
+                "tech_stack": [
+                    "CI/CD",
+                    "npm",
+                    "yarn",
+                    "Webpack",
+                    "Babel"
+                ],
+                "github": "https://github.com/johndoe/project-b",
+                "demo": "https://www.example.com/project-b"
+            },
+            {
+                "name": "HomeFinApp",
+                "description": "A web application for managing personal finances. Features include budget tracking, expense categorization, financial reports, analyzing receipts, and setting financial goals. WIP.",
+                "tech_stack": [
+                    "Node.js",
+                    "React.js",
+                    "Tailwind CSS",
+                    "MongoDB",
+                    "Express.js"
+                ],
+                "github": "https://www.example.com/project-b",
+                "demo": "https://www.example.com/project-b"
+            }
+        ],
+        "about_me": "John Doe is a Fullstack Developer with expertise in JavaScript, TypeScript, React.js, Node.js, CI/CD, npm, yarn, Webpack, and Babel. He has worked as an Administrator Oracle BI Publisher, a Fullstack Developer for Company A, and a Frontend Developer for Company B."
+    },
+    "supplement": {
+        "review": "{\n  \"improvement_suggestions\": [\n    {\n      \"suggestion\": \"Add more details about the candidate's previous roles, accomplishments, and experiences.\",\n      \"description\": \"Add more specific information about the candidate\u2019s previous roles, responsibilities, and achievements to better showcase their strengths.\"\n    },\n    {\n      \"suggestion\": \"Clarify any unclear statements in the resume or highlight section.\",\n      \"description\": \"Ensure that all statements are clear, concise, and avoid any confusing terms or jargon.\"\n    },\n    {\n      \"suggestion\": \"Refine formatting for easier readability.\",\n      \"description\": \"Make sure to use consistent bullet points and list items for a better reader experience. \"\n    }\n  ]\n}"
+    },
+    "info": {
+        "total_duration": 3186831000,
+        "load_duration": 23679000,
+        "prompt_eval_count": 120,
+        "prompt_eval_duration": 7000000,
+        "eval_count": 149,
+        "eval_duration": 3154000000
+    },
+    "model": "qwen2.5:0.5b",
+    "prompt_path": "C:\\magisterka\\UG\\cv-inator\\prompts\\cv_generation\\prompt_pack_01.json",
+    "prompt_hash": "b5499c8c284a0e76d0778fab139f1d33c6293b1b150e3e63a62d5822c18f1851",
+    "offer_id": 999999999999,
+    "offer_path": "C:\\magisterka\\UG\\cv-inator\\data\\offers\\1.json",
+    "offer_hash": "b9d4d734ac0113befa9f87695d0130a577d399bf2fa32ce533d9587f6ae680c7",
+    "profile_path": "C:\\magisterka\\UG\\cv-inator\\users_cv_data\\01.json",
+    "profile_hash": "a4a04271eebb2cfcf03ae0c21bc51a1897c15c6496820c3e52ebebc59350dd08",
+    "timestamp": "2025-01-20 14:39:22.934491",
+    "LLM_engine": "ollama"
+}

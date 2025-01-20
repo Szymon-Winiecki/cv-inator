@@ -5,9 +5,9 @@ from pathlib import Path
 from data_access import load_offer, load_cv_data, save_cv_data
 
 def display_job_offer(offer_record):
-
+    
     offer_id, offer_details = offer_record
-    offer_path = Path(offer_details.get("path", ""))
+    offer_path = offer_details
 
     offer = load_offer(offer_path)
 
@@ -16,7 +16,7 @@ def display_job_offer(offer_record):
         return
     
     timestamp = offer.get("timestamp", "")
-    timestamp = datetime.fromisoformat(timestamp.replace("Z", "")).strftime("%Y-%m-%d %H:%M:%S")
+    #timestamp = datetime.fromisoformat(timestamp.replace("Z", "")).strftime("%Y-%m-%d %H:%M:%S")
     source_url = offer.get("source", "#")
 
     offer = offer.get("offer", {})
@@ -318,7 +318,6 @@ def get_certification_data(certDataForm):
             "date": cert.get("date", "").strftime("%Y-%m-%d"),
             "description": cert.get("description", "")
     })
-    print(CertData)
     return CertData
 
 def get_project_data(projectDataForm):
