@@ -56,7 +56,7 @@ def get_similar_offer_ids(offer_id):
     print(f"Most similar offers to the offer with id {offer_id}:")
     print(most_similar)
 
-    # get 3 most similar offers
+    # get 10 most similar offers
     most_similar_emb_ids = list(most_similar.keys())[:10]
     #adding .json to every id
     most_similar_emb_ids = [str(emb_id)+'.json' for emb_id in most_similar_emb_ids]
@@ -137,7 +137,7 @@ def display_page():
     if filtered_offers:
         for offer in filtered_offers:
             title = offer.get("offer_title", "No title provided")
-            with st.expander(title):  # Expander for each offer
+            with st.expander(title+' '+offer['id']):  # Expander for each offer
                 st.markdown(format_offer_details(offer), unsafe_allow_html=True)
                 similar_button_key = f"similar_{offer['id']}"
                 if st.button("Show Similar Offers", key=similar_button_key):
