@@ -114,6 +114,8 @@ def display_page():
 
     st.title("PCA Plot")
 
+    st.write("Select offers to highlight them on the plot")
+
     if 'plot_data' not in st.session_state:
         st.session_state.plot_data = get_plot_data()
         st.session_state.offers = get_offers_data(st.session_state.plot_data['id'].to_list()) # emb id to offer dict
