@@ -133,6 +133,20 @@ class EmbeddingsController:
         if full_info_path.exists():
             full_info_path.unlink()
 
+    @staticmethod 
+    def delete_all_embeddings(conn, data_dir):
+        cur = conn.cursor()
+        cur.execute('''SELECT embedding_path, info_path FROM embeddings''')
+        for embedding_path, info_path in cur.fetchall():
+            full_embedding_path = data_dir / embedding_path
+            full_info_path = data_dir / info_path
+            if full_embedding_path.exists():
+                full_embedding_path.unlink()
+            if full_info_path.exists():
+                full_info_path.unlink()
+        
+        cur.execute('''DELETE FROM embeddings''')
+
     @staticmethod
     def delete_embeddings_by_summary_id(conn, data_dir, summary_id):
         cur = conn.cursor()

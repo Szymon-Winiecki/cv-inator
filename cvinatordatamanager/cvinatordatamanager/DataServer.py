@@ -93,8 +93,14 @@ class DataServer:
     def get_offer_by_id(self, offer_id):
         return OffersController.get_offer_by_id(self.conn, self.data_dir, offer_id)
     
+    def get_offers_by_ids(self, offers_ids):
+        return OffersController.get_offers_by_ids(self.conn, self.data_dir, offers_ids)
+    
     def get_offer_by_embedding_id(self, embedding_id):
         return OffersController.get_offer_by_embeding_id(self.conn, self.data_dir, embedding_id)
+    
+    def get_offers_ids_by_embeddings_ids(self, embeddings_ids):
+        return OffersController.get_offers_ids_by_embeddings_ids(self.conn, embeddings_ids)
     
     ###
     # Insert offer
@@ -196,6 +202,9 @@ class DataServer:
     
     def delete_embedding(self, embedding_id):
         return EmbeddingsController.delete_embedding(self.conn, self.data_dir, embedding_id)
+    
+    def delete_all_embeddings(self):
+        return EmbeddingsController.delete_all_embeddings(self.conn, self.data_dir)
     
 
     ###

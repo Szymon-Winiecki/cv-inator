@@ -37,6 +37,18 @@ class OffersController:
         return offer
     
     @staticmethod
+    def get_offers_by_ids(conn, data_dir, offers_ids):
+        cur = conn.cursor()
+        cur.execute('''SELECT id, path FROM offers WHERE id IN ({seq})'''.format(seq=','.join(['?']*len(offers_ids))), offers_ids)
+
+        offers = {}
+
+        for id, relative_path in cur.fetchall():
+            offers[id] = load_json(data_dir / relative_path)
+
+        return offers
+    
+    @staticmethod
     def get_offer_by_embeding_id(conn, data_dir, embedding_id):
         cur = conn.cursor()
         cur.execute('''SELECT summaries.offer_id FROM embeddings JOIN summaries ON embeddings.summary_id = summaries.id WHERE embeddings.id=?''', (embedding_id,))
@@ -47,6 +59,13 @@ class OffersController:
         
         offer_id = row[0]
         return OffersController.get_offer_by_id(conn, data_dir, offer_id)
+    
+    @staticmethod
+    def get_offers_ids_by_embeddings_ids(conn, embeddings_ids):
+        cur = conn.cursor()
+        print(','.join(map(str, embeddings_ids)))
+        cur.execute('''SELECT embeddings.id, summaries.offer_id FROM embeddings JOIN summaries ON embeddings.summary_id = summaries.id WHERE embeddings.id IN ({seq})'''.format(seq=','.join(['?']*len(embeddings_ids))), embeddings_ids)
+        return {t[0] : t[1] for t in cur.fetchall()}
     
     @staticmethod
     def insert_offer(conn, data_dir, offer):

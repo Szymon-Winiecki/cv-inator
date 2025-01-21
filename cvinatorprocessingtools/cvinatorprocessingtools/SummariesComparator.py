@@ -86,6 +86,30 @@ class SummariesComparator:
 
         return similarities, partial_similarities
     
+    def get_concatenated_embeddings(self, embeddings_ids : list) -> tuple:
+        features_query = { field: "embedding" for field in self.comparation_sheme if self.comparation_sheme[field]["method"] == "embedding" }
+            
+        features = [ self.data_server.get_offer_features(embedding_id, features_query) for embedding_id in embeddings_ids ]
+
+        i = 0
+        while i < len(features):
+            if features[i] == None:
+                print(f"WARNING! No features for the offer with id {embeddings_ids[i]}. Skipping this offer")
+                features.pop(i)
+                embeddings_ids.pop(i)
+            else:
+                i += 1
+
+        for f in features:
+            del f['embedding_model']
+
+        embeddings = np.zeros((len(features), len(features[0][list(features[0].keys())[0]]) * len(features[0])))
+
+        for i, f in enumerate(features):
+            embeddings[i] = np.concatenate([f[field] for field in f])
+
+        return embeddings, embeddings_ids
+    
     def __get_features_query(self) -> dict:
         features_query = {}
         for field in self.comparation_sheme:
