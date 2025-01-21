@@ -63,7 +63,6 @@ class OffersController:
     @staticmethod
     def get_offers_ids_by_embeddings_ids(conn, embeddings_ids):
         cur = conn.cursor()
-        print(','.join(map(str, embeddings_ids)))
         cur.execute('''SELECT embeddings.id, summaries.offer_id FROM embeddings JOIN summaries ON embeddings.summary_id = summaries.id WHERE embeddings.id IN ({seq})'''.format(seq=','.join(['?']*len(embeddings_ids))), embeddings_ids)
         return {t[0] : t[1] for t in cur.fetchall()}
     
