@@ -8,8 +8,8 @@ Please summarize the following job offer in English and structure the output as 
     experience_level: The level of experience required for the job (e.g., Junior, Mid-level, Senior).
     industry: The industry in which the company operates (e.g., Information Technology, Finance).
     job_description: A short, concise description of the job and main responsibilities (2-3 sentences).
-    requirements: A bullet-point list of qualifications, skills, and experience required for the role.
-    required_skills: A bullet-point list of specific skills required for the role. Use only short names of technologies or methods. No sentences.
+    requirements: A bullet-point list of qualifications, skills, and experience required for the role. Avoid mentioning knowlegde of technology or methods here, put them in the 'required_skills' section instead. Include no more than five most important requirements. Max 5 most important requirements.
+    required_skills: A bullet-point list of specific skills (technologies, methods, frameworks, languages) required for the role. Use only short names of technologies, methods, frameworks, languages and programs. One name per element. No sentences nor descriptions. No specific numeric versions, only names. List all required technologies, methods, frameworks, languages and programs mentioned in the offer.
 
 Ensure the response is formatted as valid JSON. If any information is missing in the job offer, use 'N/A' for the respective field.
 
@@ -19,7 +19,13 @@ Be concise and precise.
 
 Limit the response to a total of 1000 words or less.
 
+Ensure that the 'required_skills' field is a list of specific skills (technologies, methods, frameworks, languages) required for the role. Only short names of skills are used. There is exactly one name per element. There are not any sentences nor descriptions nor specific numeric versions. And ensure that a list of 'required_skills' is complete list of all required technologies, methods, frameworks, languages and programs mentioned in the offer.
+
+Whole summary has to be in english (translate if necessary).
+
 Put only JSON in response.
+
+Ensure that summary is written in english.
 
 Ensure all fields are fully filled with content from the job offer, without placeholders or square brackets [].
 
