@@ -28,13 +28,11 @@ When generating a CV, the tool uses your previously provided profile data, combi
 
 Before running the app, make sure to install the following dependencies:
 
-### Install python packages:
+1. Install python packages: [Pytorch](https://pytorch.org/get-started/locally/), [Jinja2](https://jinja.palletsprojects.com/en/stable/), [streamlit](https://streamlit.io/)
 
-[Pytorch](https://pytorch.org/get-started/locally/), [Jinja2](https://jinja.palletsprojects.com/en/stable/), [streamlit](https://streamlit.io/)
+2. Install [Ollama](https://ollama.com/), a local LLM server.
 
-### Install [Ollama](https://ollama.com/), a local LLM server.
-
-### install [SBERT](https://sbert.net/), a Sentence Transformers module for generating sentence embeddings and calculating similarity scores.
+3.  install [SBERT](https://sbert.net/), a Sentence Transformers module for generating sentence embeddings and calculating similarity scores.
 
 tested with ONNX version:
 
@@ -42,7 +40,7 @@ tested with ONNX version:
 pip install -U "sentence-transformers[onnx-gpu] @ git+https://github.com/UKPLab/sentence-transformers.git"
 ```
 
-### install local cv-inator packages
+4.  install local cv-inator packages
 
 in the root project dir:
 
@@ -51,9 +49,7 @@ pip install -e cvinatordatamanager
 pip install -e cvinatorprocessingtools
 ```
 
-### Optionally, for a scraping functionality: 
-
-[selenium](https://selenium-python.readthedocs.io/), [BeautifulSoup](https://pypi.org/project/beautifulsoup4/)
+5. Optionally, for a scraping functionality: [selenium](https://selenium-python.readthedocs.io/), [BeautifulSoup](https://pypi.org/project/beautifulsoup4/)
 
 ## Usage
 
