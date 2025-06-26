@@ -6,24 +6,19 @@ import os
 
 PROJECT_ROOT_DIR = Path(__file__).resolve().parents[1]
 
-# Path to the job offers index file
-OFFERS_INDEX_PATH = PROJECT_ROOT_DIR / "data" / "offers"
-COMPARISON_RECORDS_DIR = PROJECT_ROOT_DIR / "human_comparisons" / "offers_similarity"
-CV_DATA_DIR = PROJECT_ROOT_DIR / "users_cv_data"
-CV_GEN_DIR = PROJECT_ROOT_DIR / "users_cv_data_generated"
-HTML_TEMPLATES_DIR = PROJECT_ROOT_DIR / "cv_visualisation" / "templates"
-GENERATED_CV_DIR = PROJECT_ROOT_DIR / "generated_cv_html"
+DATA_SERVER_DIR = PROJECT_ROOT_DIR / "data"
+OFFERS_INDEX_PATH = DATA_SERVER_DIR / "offers"
+COMPARISON_RECORDS_DIR = PROJECT_ROOT_DIR / "local" / "human_comparisons" / "offers_similarity"
+CV_DATA_DIR = PROJECT_ROOT_DIR / "user_data" / "users_cv_data"
+CV_GEN_DIR = PROJECT_ROOT_DIR / "generated" / "users_cv_data_generated"
+HTML_TEMPLATES_DIR = PROJECT_ROOT_DIR / "cmd_tools" / "cv_visualisation" / "templates"
+GENERATED_CV_DIR = PROJECT_ROOT_DIR / "generated" / "generated_cv_html"
 
 @st.cache_data
 def load_offers_list():
     paths =  [path for path in OFFERS_INDEX_PATH.glob("*.json")]
-
-
     offers_data = [(i, value) for i, value in enumerate(paths)]
-    #with open(path, "w") as file:
-        #offers_index = json.load(file)
-    
-    #offers = list(offers_index.get("offers", {}).items())
+
     return offers_data
 
 @st.cache_data
@@ -135,13 +130,13 @@ def get_output_path(username, template, offer_id):
     return PROJECT_ROOT_DIR / "generated_cv_html" / f"{username}_{template}_{offer_id}.html"
 
 def get_data_directory():
-    return PROJECT_ROOT_DIR / "data" / "offers"
+    return DATA_SERVER_DIR / "offers"
 
 def get_database_directory():
-    return PROJECT_ROOT_DIR / "data"
+    return DATA_SERVER_DIR
 
 def load_offer_path(offer_id):
-    return PROJECT_ROOT_DIR / "data" / "offers" / f"{offer_id}.json"
+    return DATA_SERVER_DIR / "offers" / f"{offer_id}.json"
 
 def load_cv_path(username):
     return PROJECT_ROOT_DIR / "users_cv_data" / f"{username}.json"
@@ -150,7 +145,7 @@ def load_prompt_cv_path():
     return PROJECT_ROOT_DIR / "prompts" / "cv_generation" / "prompt_pack_01.json"
 
 def load_output_path_cv_generated(username, offer_id):
-    return PROJECT_ROOT_DIR / "users_cv_data_generated" / f"{username}_{offer_id}.json"
+    return PROJECT_ROOT_DIR / "generated" / "users_cv_data_generated" / f"{username}_{offer_id}.json"
 
 def create_user(username):
     path = CV_DATA_DIR / f"{username}.json"

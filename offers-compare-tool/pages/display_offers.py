@@ -1,10 +1,14 @@
+from pathlib import Path
+
 from cvinatordatamanager.DataServer import DataServer
 from cvinatorprocessingtools.SummariesComparator import SummariesComparator
 
 import streamlit as st
 
+PROJECT_ROOT_DIR = Path(__file__).resolve().parents[1]
+
 def init_data_server():
-    data_server = DataServer('../data')
+    data_server = DataServer(PROJECT_ROOT_DIR / 'data')
     return data_server
 
 def get_offers():
@@ -190,6 +194,6 @@ def display_page():
             reset_similarities()
             st.experimental_rerun()  # Reload the page to show all offers
 
-# Use this function to test the page independently if needed
+
 if __name__ == "__main__":
     display_page()

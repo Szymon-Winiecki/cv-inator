@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from cvinatordatamanager.DataServer import DataServer
 from cvinatorprocessingtools.SummariesComparator import SummariesComparator
 
@@ -7,8 +9,10 @@ import pandas as pd
 
 import streamlit as st
 
+PROJECT_ROOT_DIR = Path(__file__).resolve().parents[1]
+
 def init_data_server():
-    data_server = DataServer('../data')
+    data_server = DataServer(PROJECT_ROOT_DIR / 'data')
     return data_server
 
 def get_concatenated_embeddings(data_server):

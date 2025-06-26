@@ -1,11 +1,16 @@
+import argparse
 import json
+import time
+import requests
+
+from pathlib import Path
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+
 from bs4 import BeautifulSoup
-import time
-import requests
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Run in headless mode
@@ -13,18 +18,14 @@ chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64
 service = Service('C:/WebDrivers/bin/chromedriver.exe')  # Update with your ChromeDriver path
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
-
-    #  ["offer_title", () => this.#scrapOfferTitle()],
-    #     ["company", () => this.#scrapCompany()],
-    #     ["salary", () => this.#scrapSalary()],
-    #     ["contract", () => this.#scrapContract()],
-    #     ["location", () => this.#scrapLocation()],
-    #     ["experience", () => this.#scrapExperienceLevel()],
-    #     ["expected_technologies", () => this.#scrapExpectedTechnologies()],
-    #     ["optional_technologies", () => this.#scrapOptionalTechnologies()],
-    #     ["offer_content", () => this.#scrapOfferContent()],
-
 main_url = "https://theprotocol.it/praca"
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Scrape job offers from TheProtocol.it')
+    parser.add_argument('-num_offers', '-n', required=True, type=int, help='Number of job offers to scrape')
+    parser.add_argument('-output' '-o', required=True, type=Path, help='Path to the output json file')
+    return parser.parse_args()
 
 def get_offers_urls(n_offers):
     # Set up Selenium with Chrome
@@ -119,7 +120,7 @@ def extract_job_data(url):
     
     return job_data
 
-def main():
+def scrape(n_offers=500):
     n_offers = 500
     urls = get_offers_urls(n_offers)
     job_data_list = []
@@ -130,10 +131,16 @@ def main():
         job_data = extract_job_data(full_url)
         time.sleep(1)  # Be polite to the server
         job_data_list.append(job_data)
+
+    return job_data_list
     
+def save_to_json(job_data_list, output_path):
     # Save the data to a JSON file
-    with open('job_offers.json', 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(job_data_list, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    offers = scrape(args.num_offers)
+    save_to_json(offers, args.output)
+    print(f"Scraped {len(offers)} job offers and saved to {args.output}")

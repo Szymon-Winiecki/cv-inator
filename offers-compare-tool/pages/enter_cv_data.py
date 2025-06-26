@@ -1,12 +1,9 @@
-from data_access import load_offers_list, load_offer, add_comparison_record, load_comparisons, load_usernames, remove_comparison_record, save_cv_data, load_cv_data, create_user
-from data_display import display_job_offer, display_user_form
+from data_access import load_usernames, save_cv_data, load_cv_data, create_user
+from data_display import display_user_form
 import streamlit as st
-import datetime
-import json
 
 def display_page():
     st.title("Make CV")
-    
 
     username = st.text_input("Enter your name", key="username")
     if st.button("Add new user"):
